@@ -1,0 +1,25 @@
+@media (max-width: 640px) {
+  .Services_Main {
+    width: 100%;
+    height: 1000px;
+  }
+  .Services_Title {
+    font-size: 25px;
+    line-height: 32px;
+    width: 90%;
+  }
+  .Services_Sub {
+    font-size: 12px;
+    margin-top: 20px;
+    text-align: left;
+    padding: 0px 0px;
+    margin-left: -10px;
+    margin-right: 0px;
+    width: 110%;
+  }
+  .Services_Points {
+    flex-wrap: wrap;
+    margin-left: 0px;
+    width: 90%;
+  }
+}

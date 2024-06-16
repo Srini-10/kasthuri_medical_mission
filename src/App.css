@@ -1,0 +1,21 @@
+/* Default styles */
+.App_Content {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .App {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+  }
+  .App_Content {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+  }
+  .App_Main {
+    display: none;
+  }
+}

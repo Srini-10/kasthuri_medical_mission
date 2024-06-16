@@ -1,0 +1,8 @@
+@media (max-width: 640px) {
+  .Content_Main {
+    font-size: 13px;
+    padding: 20px;
+    width: 90%;
+    margin-top: 40px;
+  }
+}

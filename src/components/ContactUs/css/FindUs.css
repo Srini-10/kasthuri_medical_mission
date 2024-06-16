@@ -1,0 +1,35 @@
+@media (max-width: 640px) {
+  .FindUs_Main {
+    width: 100%;
+    height: 560px;
+    margin-top: 1060px;
+    padding: 0px;
+  }
+  .FindUs_Title {
+    font-size: 40px;
+    margin-left: 5%;
+  }
+  .FindUs_Main_Grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    width: 90%;
+    margin: auto 5%;
+    margin-top: 20px;
+    place-content: center;
+  }
+  .FindUs_Grid img {
+    width: 35px;
+  }
+  .FindUs_Numbers h1 {
+    font-size: 16px;
+  }
+  .FindUs_Numbers p {
+    font-size: 12px;
+  }
+  .FindUs_Map {
+    width: 90%;
+    margin: auto 5%;
+  }
+  .FindUs_Map iframe {
+    height: 250px;
+  }
+}

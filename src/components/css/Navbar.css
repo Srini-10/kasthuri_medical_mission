@@ -1,0 +1,41 @@
+/* Navbar.css */
+
+.navbar-toggle,
+.navbar-center,
+.navbar-book {
+  display: none;
+}
+
+.navbar-content {
+  display: flex;
+  gap: 4px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.navbar-appointment {
+  display: flex;
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    width: 100%;
+    height: 60px;
+  }
+
+  .navbar-toggle,
+  .navbar-center,
+  .navbar-book {
+    display: flex;
+  }
+  .navbar-center {
+    margin-left: 14%;
+  }
+  .navbar-content {
+    display: none;
+  }
+
+  .navbar-appointment {
+    display: none;
+  }
+}

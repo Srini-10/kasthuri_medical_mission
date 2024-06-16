@@ -1,0 +1,87 @@
+@media (max-width: 640px) {
+  .Main {
+    height: 620px;
+    width: 100%;
+    padding: 0 0px; /* Added padding to prevent content touching the edges */
+  }
+
+  .Main_Img {
+    overflow: hidden;
+    margin-top: 0px;
+    height: 620px;
+  }
+  .Bg_Main {
+    min-width: 230%;
+    margin-left: -220px;
+    min-height: 620px;
+  }
+
+  .Main_Name {
+    min-width: 150%;
+    max-width: 150%;
+    font-size: 40px;
+    font-weight: bolder;
+    line-height: 40px;
+    margin-top: 20px;
+    margin-left: -100px; /* Adjusted margin for better alignment */
+  }
+
+  .Sub_Name {
+    min-width: 65%;
+    max-width: 65%;
+    margin-left: -100px; /* Adjusted margin for better alignment */
+    font-size: 12px;
+  }
+
+  .Get_Started {
+    margin-left: -100px; /* Adjusted margin for better alignment */
+  }
+  .Main_Over {
+    top: 620px;
+  }
+  .Design_Main {
+    margin-top: 350px;
+    position: absolute;
+    right: 270px;
+    width: 165px;
+    justify-content: space-around;
+  }
+
+  .Design_Main img {
+    width: 10px;
+    height: 10px;
+  }
+
+  .Main_Quote {
+    font-size: 10px;
+    margin-left: 50px; /* Adjusted margin for better alignment */
+    margin-top: -300px;
+    bottom: 130px;
+  }
+
+  .Success {
+    bottom: 0;
+    width: 330px;
+    font-size: 12px;
+    position: absolute;
+    right: 0; /* Align to the right side */
+  }
+
+  .Success_Main {
+    gap: 20px;
+    width: 100%;
+    margin: -10px -20px;
+  }
+
+  .Font_Main {
+    font-size: 10px;
+  }
+
+  .Font_Main b {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 641px) {
+  /* Styles for larger screens can be added here if needed */
+}

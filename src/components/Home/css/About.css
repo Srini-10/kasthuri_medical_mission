@@ -1,0 +1,93 @@
+@media (max-width: 640px) {
+  .About_Main {
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 820px;
+  }
+
+  .About_Main_Title {
+    margin-top: -20px;
+  }
+
+  .Flex_About {
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 0px;
+  }
+
+  .About_Title {
+    margin-left: 10px;
+  }
+
+  .Sub_About {
+    font-size: 20px;
+    width: 93%;
+    margin-left: 0;
+  }
+
+  .Sub_About_Span {
+    font-size: 14px;
+  }
+  .Points {
+    grid: none;
+  }
+  .Points span {
+    margin: -5px 0px;
+  }
+  .Point2 {
+    margin-left: 0px;
+  }
+
+  .About_Button {
+    margin-top: 20px;
+    margin-left: 0px;
+  }
+
+  .Heart_Beat {
+    display: none;
+  }
+  .About_Img_Container {
+    margin-left: -4%;
+    padding-left: 0px;
+    position: relative;
+    margin-top: -15%;
+    width: 95%;
+  }
+  .About_Img_Container div {
+    display: none;
+  }
+
+  .About_Img {
+    min-width: 110%;
+    position: relative;
+  }
+}
+
+@media (min-width: 641px) {
+  .About_Main {
+    padding-left: 125px;
+    padding-right: 32px;
+    height: 500px;
+  }
+
+  .Flex_About {
+    flex-wrap: nowrap;
+  }
+
+  .Sub_About {
+    font-size: 45px;
+    width: 700px;
+    margin-left: 0;
+  }
+
+  .Sub_About_Span {
+    font-size: 15px;
+    width: 750px;
+  }
+
+  .About_Button {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+}

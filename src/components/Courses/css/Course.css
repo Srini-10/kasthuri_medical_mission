@@ -1,0 +1,45 @@
+.Card {
+  border: 1px solid white;
+}
+
+.Card:hover {
+  border-color: #3ad29a;
+}
+
+.Card:hover Button {
+  background-color: #34d399;
+}
+
+@media (max-width: 640px) {
+  .Course_Main {
+    width: 100%;
+    min-height: 1400px;
+  }
+  .Course_Contents {
+    width: 85%;
+    margin-left: 40px;
+  }
+  .Course_Title {
+    width: 100%;
+    font-size: 35px;
+    margin-top: 20px;
+    margin-left: 0px;
+    flex-wrap: wrap;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+  .Course_Sub {
+    width: 90%;
+    font-size: 13px;
+  }
+  .Course_Containers {
+    width: 100%;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .Card {
+    width: 100%;
+  }
+  .Course_Footer {
+    margin-top: 0px;
+  }
+}

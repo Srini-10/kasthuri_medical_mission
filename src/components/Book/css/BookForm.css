@@ -1,0 +1,22 @@
+@media (max-width: 640px) {
+  .Form_Main {
+    width: 90%;
+    height: 855px;
+    margin-left: 12px;
+    margin-top: -10px;
+  }
+  .Form_Title {
+    font-size: 30px;
+    margin-left: -40px;
+  }
+  .Form_Grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    width: 118%;
+    margin: 0px -40px 0px -40px;
+    place-content: center;
+  }
+  .Form_Button {
+    margin-top: 15px;
+    margin-left: -40px;
+  }
+}

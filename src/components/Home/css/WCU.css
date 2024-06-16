@@ -1,0 +1,49 @@
+@media (max-width: 640px) {
+  .WCU_Main {
+    width: 100%;
+    height: 720px;
+  }
+  .WCU_Img {
+    display: none;
+  }
+  .WCU_Title {
+    margin-left: -100px;
+    margin-top: -10px;
+  }
+  .Title {
+    font-size: 32px;
+  }
+  .WCU_Sub {
+    font-size: 14px;
+    width: 93%;
+  }
+  .Container_Main {
+    scale: 0.965;
+  }
+  .Container_WCU {
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-bottom: -8px;
+  }
+  .Container_WCU Button {
+    width: 94%;
+    justify-content: left;
+  }
+
+  .Button1 div {
+    margin-left: 15px;
+    padding-left: 0px;
+  }
+  .Button2 div {
+    margin-left: -1px;
+    padding-left: 0px;
+  }
+  .Button3 div {
+    margin-left: 9px;
+    padding-left: 0px;
+  }
+  .Button4 div {
+    margin-left: -13px;
+    padding-left: 0px;
+  }
+}

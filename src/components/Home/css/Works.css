@@ -1,0 +1,32 @@
+@media (max-width: 640px) {
+  .Works_Main {
+    height: 750px;
+    position: relative;
+  }
+  .Works_Title {
+    font-size: 40px;
+    line-height: 40px;
+    margin-left: -50px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 7px;
+    width: 280px;
+  }
+  .Works_Sub {
+    font-size: 12px;
+    width: 300px;
+    margin-left: -50px;
+    text-align: left;
+  }
+  .Container_Works {
+    width: 90%;
+    margin-left: 50px;
+    flex-wrap: wrap;
+  }
+  .Container_Design {
+    display: none;
+  }
+  .Works_SA {
+    text-wrap: nowrap;
+  }
+}

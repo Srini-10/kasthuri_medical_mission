@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/kmm/static/css/main.53901509.css",
+    "main.js": "/kmm/static/js/main.add81e7d.js",
+    "static/media/Doctor_Profile.png": "/kmm/static/media/Doctor_Profile.0f0f8a0aae38e9483749.png",
+    "static/media/kmm.png": "/kmm/static/media/kmm.ef3db88e4d4e8be5f31c.png",
+    "static/media/Doctor.jpeg": "/kmm/static/media/Doctor.1aa45f1fcf2f374d4781.jpeg",
+    "static/media/Map.png": "/kmm/static/media/Map.a964c528373b4d18c567.png",
+    "static/media/Contact_Doctor.png": "/kmm/static/media/Contact_Doctor.19ac9e61b471c24430f2.png",
+    "static/media/People2.png": "/kmm/static/media/People2.8c6e089508a39cd3e8c2.png",
+    "static/media/People3.png": "/kmm/static/media/People3.8c6e089508a39cd3e8c2.png",
+    "static/media/People4.png": "/kmm/static/media/People4.8c6e089508a39cd3e8c2.png",
+    "static/media/People5.png": "/kmm/static/media/People5.8c6e089508a39cd3e8c2.png",
+    "static/media/People6.png": "/kmm/static/media/People6.8c6e089508a39cd3e8c2.png",
+    "static/media/People7.png": "/kmm/static/media/People7.b5041f8c755e69041d8a.png",
+    "static/media/Oops.svg": "/kmm/static/media/Oops.35af0ea4ec3b4179d7c54e115d0e1291.svg",
+    "static/media/Medicine.svg": "/kmm/static/media/Medicine.ad2d557ab3db026091c11efbf8f64081.svg",
+    "static/media/Clinic-Building.svg": "/kmm/static/media/Clinic-Building.9eb445a6f75973375fe19f536dd806f7.svg",
+    "static/media/Doctor_Icon.svg": "/kmm/static/media/Doctor_Icon.77b1d87f7d425f8197d701538d923f1f.svg",
+    "static/media/Stethoscope.svg": "/kmm/static/media/Stethoscope.fbfbb0ddfd452bcb4862bfaa1482586c.svg",
+    "static/media/Microscope.svg": "/kmm/static/media/Microscope.3fb6ff1c5da9dd0d22963160d07f8285.svg",
+    "static/media/Folder.svg": "/kmm/static/media/Folder.aa25343c7200b7ae54d60e3a6c210ebf.svg",
+    "static/media/Heart-Beat.svg": "/kmm/static/media/Heart-Beat.be269a127b41a132ba8b5fc4a131ee3c.svg",
+    "static/media/Inject.svg": "/kmm/static/media/Inject.157da89f283fbeccda13868974afb722.svg",
+    "static/media/Medicine-Chest.svg": "/kmm/static/media/Medicine-Chest.ad40aa773ff47c17d7b768010cb8c8bc.svg",
+    "static/media/Heart_Beat.svg": "/kmm/static/media/Heart_Beat.4c6b77ed098395a7b8bfc7406c10a44d.svg",
+    "static/media/Phone.svg": "/kmm/static/media/Phone.35d2d3cdbac6939173f2e0bb5b411cb2.svg",
+    "index.html": "/kmm/index.html",
+    "static/media/Mail.svg": "/kmm/static/media/Mail.72477245209ffb0bcb6bf99778c0856a.svg",
+    "static/media/Tick.svg": "/kmm/static/media/Tick.a505171d69828fe559138825bdcec5c5.svg",
+    "static/media/Location.svg": "/kmm/static/media/Location.7eff23d14088ad86da78b41a59090402.svg",
+    "main.53901509.css.map": "/kmm/static/css/main.53901509.css.map",
+    "main.add81e7d.js.map": "/kmm/static/js/main.add81e7d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.53901509.css",
+    "static/js/main.add81e7d.js"
+  ]
+}
