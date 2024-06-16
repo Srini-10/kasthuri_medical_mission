@@ -2,12 +2,12 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Nav from "./components/Navbar.tsx";
-import Home from "./components/Home.tsx";
-import AboutUs from "./components/AboutUs.tsx";
-import ContactUs from "./components/ContactUs.tsx";
-import Course from "./components/Courses.tsx";
-import Details from "./components/Details.tsx";
-import Book from "./components/BookApp.tsx";
+import Home from "./pages/Home.tsx";
+import AboutUs from "./pages/AboutUs.tsx";
+import ContactUs from "./pages/ContactUs.tsx";
+import Course from "./pages/Courses.tsx";
+import Details from "./pages/Details.tsx";
+import Book from "./pages/BookApp.tsx";
 import "./App.css";
 import Oops from "./assets/Oops.svg";
 import SpecialistDetails from "./components/Specialist/SpecialistDetails.tsx";
