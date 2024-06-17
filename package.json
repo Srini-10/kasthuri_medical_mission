@@ -1,6 +1,6 @@
 {
-  "name": "code",
-  "version": "0.1.0",
+  "name": "kasthuri_medical_mission",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@internationalized/date": "^3.5.3",
@@ -79,6 +79,11 @@
     "postcss": "^8.4.38",
     "postcss-preset-mantine": "^1.15.0",
     "postcss-simple-vars": "^7.0.1",
-    "tailwindcss": "^3.4.3"
+    "tailwindcss": "^3.4.3",
+    "pnpm": "^7.0.0"
+  },
+  "engines": {
+    "node": ">=20.12.2",
+    "bun": "1.1.0"
   }
 }
