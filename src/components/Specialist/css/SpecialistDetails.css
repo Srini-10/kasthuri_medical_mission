@@ -1,7 +1,29 @@
 @media (max-width: 640px) {
+  .Specialist_Img {
+    display: none;
+  }
   .SD_Main {
-    width: 100%;
-    height: 100%;
-    background: #000;
+    max-width: 200%;
+    min-height: 510px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .Container_Design {
+    display: none;
+  }
+  .SD_Contents {
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  .SD_Hello {
+    font-size: 30px;
+  }
+  .SD_Name {
+    margin-top: 2px;
+    font-size: 34px;
+  }
+  .SD_Sub {
+    font-size: 13px;
+    text-align: justify;
   }
 }

@@ -1,6 +1,6 @@
 import { Button } from "@nextui-org/react";
 import React from "react";
-import Doctor from "../../assets/Doctor_Profile.png";
+import Doctor from "../../assets/Subramanian.png";
 import "./css/Specialist.css";
 import { Link } from "react-router-dom";
 
@@ -15,13 +15,13 @@ const Specialist = () => {
           <p className="Specialist_Sub text-gray-700">
             M.D.ARCGP, (London), Ph.D. (USA)
           </p>
-          <Link to="/Specialist_Details">
+          <Link to="/Specialist">
             <Button className="Specialist_Button mt-6 bg-white rounded-md font-medium">
               Know More
             </Button>
           </Link>
         </div>
-        <div className="Specialist_Img w-[420px] ml-[670px] mt-[-34px] absolute h-[370px] overflow-hidden">
+        <div className="Specialist_Img w-[370px] ml-[670px] mt-[-89px] absolute h-[425px] overflow-hidden">
           <img
             width={400}
             src={Doctor}

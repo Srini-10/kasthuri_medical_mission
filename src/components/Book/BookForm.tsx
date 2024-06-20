@@ -110,6 +110,7 @@ function BookForm() {
             styles={inputStyles}
             onChange={handleChange}
             required
+            width={100}
           />
           <TextInput
             label="Father Name"

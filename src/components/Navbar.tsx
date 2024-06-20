@@ -117,11 +117,21 @@ export default function Nav() {
                 as={Link}
                 href="/Book_Appointment"
                 variant="flat"
-                className="text-emerald-400 font-medium"
+                className="text-emerald-400 rounded-md font-medium"
               >
                 Book Appointment
               </Button>
             </Link>
+            {/* <Link href="#About_Me">
+                <Button className="rounded-md font-medium border-1 border-emerald-400 bg-emerald-400">
+                  Dr.P.A.Subramanian
+                </Button>
+              </Link> 
+            <Link href="/Contact_Us">
+              <Button className="rounded-md font-medium bg-transparent border-1 border-emerald-400">
+                Dr.P.A.Subramanian
+              </Button>
+            </Link> */}
           </NavbarItem>
         </NavbarContent>
       </NavbarContent>

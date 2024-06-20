@@ -10,7 +10,7 @@ import Details from "./pages/Details.tsx";
 import Book from "./pages/BookApp.tsx";
 import "./App.css";
 import Oops from "./assets/Oops.svg";
-import SpecialistDetails from "./components/Specialist/SpecialistDetails.tsx";
+import Specialist from "./pages/Specialist.tsx";
 // import other components here
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
           <Nav />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/Specialist_Details" element={<SpecialistDetails />} />
+            <Route path="/Specialist" element={<Specialist />} />
             <Route path="/About_Us" element={<AboutUs />} />
             <Route path="/Courses" element={<Course />} />
             <Route path="/Course_Details" element={<Details />} />

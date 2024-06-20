@@ -1,0 +1,67 @@
+@media (max-width: 640px) {
+  .SD_MainAS {
+    max-width: 200%;
+    max-height: 700px;
+  }
+  .SD_Contents {
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  .SD_About {
+    font-size: 30px;
+  }
+  .SD_Name {
+    margin-top: 2px;
+    font-size: 34px;
+  }
+  .SD_Sub {
+    font-size: 13px;
+    text-align: justify;
+  }
+  .SD_Points {
+    padding: auto;
+    margin: auto;
+    margin-top: 10px;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .SD_Add {
+    width: 100%;
+  }
+
+  .Image_Records:hover .Img_Rec {
+    transform: scale(1.5);
+  }
+  .Container_Design {
+    display: none;
+  }
+}
+.Button {
+  background-color: transparent; /* Ensure the background is transparent */
+  border: none; /* Remove default border */
+  box-shadow: none; /* Remove default shadow */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.Img_Rec {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1);
+}
+.Image_Records:hover .Img_Rec {
+  transform: scale(1.05);
+}
+
+/* Custom styles to center the modal */
+.ModalContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure modal takes full height of viewport */
+}
+
+.Img_Model_Container {
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+.Img_Model_Container:hover {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
