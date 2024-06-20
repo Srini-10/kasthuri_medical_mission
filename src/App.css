@@ -1,3 +1,11 @@
+/* App.css */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 /* Default styles */
 .App_Content {
   display: none;
@@ -8,7 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh; 
+    height: 100vh;
   }
   .App_Content {
     display: block;
