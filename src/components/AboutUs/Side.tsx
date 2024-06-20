@@ -1,9 +1,10 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import Tick from "../../assets/Tick.svg";
 import { Button } from "@nextui-org/react";
-import Image from "../../assets/Doctor.jpeg";
-import "./css/Side.css";
 import { Link } from "react-router-dom";
+import "./css/Side.css";
 
 const Side = () => {
   return (
@@ -16,30 +17,30 @@ const Side = () => {
           </p>
           <div className="mt-[20px] bg-slate-200 p-2 rounded-md">
             <li className="list-none flex gap-1">
-              <img
-                className="w-[17px] h-auto"
+              <LazyLoadImage
                 src={Tick}
                 alt=""
+                className="w-[17px] h-auto lazy-load-image"
                 onContextMenu={(e) => e.preventDefault()}
                 draggable="false"
               />
               <p className="text-[14px]">Comprehensive Medical Courses</p>
             </li>
             <li className="list-none flex gap-1">
-              <img
-                className="w-[17px] h-auto"
+              <LazyLoadImage
                 src={Tick}
                 alt=""
+                className="w-[17px] h-auto lazy-load-image"
                 onContextMenu={(e) => e.preventDefault()}
                 draggable="false"
               />
               <p className="text-[14px]">Personalized Tutoring</p>
             </li>
             <li className="list-none flex gap-1">
-              <img
-                className="w-[17px] h-auto"
+              <LazyLoadImage
                 src={Tick}
                 alt=""
+                className="w-[17px] h-auto lazy-load-image"
                 onContextMenu={(e) => e.preventDefault()}
                 draggable="false"
               />
@@ -47,9 +48,9 @@ const Side = () => {
             </li>
           </div>
           <Link to="#Services">
-          <Button className="bg-transparency text-[16px] font-medium border-2 border-emerald-400 rounded-md mt-3 pt-2 pb-2 pl-5 pr-5">
-            Know More
-          </Button>
+            <Button className="bg-transparency text-[16px] font-medium border-2 border-emerald-400 rounded-md mt-3 pt-2 pb-2 pl-5 pr-5">
+              Know More
+            </Button>
           </Link>
         </div>
       </div>
@@ -57,60 +58,60 @@ const Side = () => {
         <h1 className="font-bold">We'll Provide</h1>
         <div className="mt-[20px] p-2 grid grid-cols-2 rounded-md">
           <li className="list-none flex gap-1">
-            <img
-              className="w-[17px] h-auto"
+            <LazyLoadImage
               src={Tick}
               alt=""
+              className="w-[17px] h-auto lazy-load-image"
               onContextMenu={(e) => e.preventDefault()}
               draggable="false"
             />
             <p>Courses</p>
           </li>
           <li className="list-none flex gap-1">
-            <img
-              className="w-[17px] h-auto"
+            <LazyLoadImage
               src={Tick}
               alt=""
+              className="w-[17px] h-auto lazy-load-image"
               onContextMenu={(e) => e.preventDefault()}
               draggable="false"
             />
             <p>Courses</p>
           </li>
           <li className="list-none flex gap-1">
-            <img
-              className="w-[17px] h-auto"
+            <LazyLoadImage
               src={Tick}
               alt=""
+              className="w-[17px] h-auto lazy-load-image"
               onContextMenu={(e) => e.preventDefault()}
               draggable="false"
             />
             <p>Courses</p>
           </li>
           <li className="list-none flex gap-1">
-            <img
-              className="w-[17px] h-auto"
+            <LazyLoadImage
               src={Tick}
               alt=""
+              className="w-[17px] h-auto lazy-load-image"
               onContextMenu={(e) => e.preventDefault()}
               draggable="false"
             />
             <p>Courses</p>
           </li>
           <li className="list-none flex gap-1">
-            <img
-              className="w-[17px] h-auto"
+            <LazyLoadImage
               src={Tick}
               alt=""
+              className="w-[17px] h-auto lazy-load-image"
               onContextMenu={(e) => e.preventDefault()}
               draggable="false"
             />
             <p>Courses</p>
           </li>
           <li className="list-none flex gap-1">
-            <img
-              className="w-[17px] h-auto"
+            <LazyLoadImage
               src={Tick}
               alt=""
+              className="w-[17px] h-auto lazy-load-image"
               onContextMenu={(e) => e.preventDefault()}
               draggable="false"
             />

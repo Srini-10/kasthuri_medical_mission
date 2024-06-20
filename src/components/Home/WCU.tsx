@@ -5,17 +5,20 @@ import Icon1 from "../../assets/Clinic-Building.svg";
 import Icon2 from "../../assets/Inject.svg";
 import Icon3 from "../../assets/Doctor_Icon.svg";
 import Icon4 from "../../assets/Medicine.svg";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import "./css/WCU.css";
 
 function WCU() {
   return (
     <>
       <div className="WCU_Main bg-emerald-50 flex flex-auto text-[30px] font-bold pl-32 pt-10 h-[460px]">
-        <div className=" bg-white rounded-lg mt-[-10px] h-[400px]">
-          <img
+        <div className="bg-white rounded-lg mt-[-10px] h-[400px]">
+          <LazyLoadImage
             src={Icon}
             alt=""
             className="WCU_Img w-[480px] h-[375px] mt-[15px] rounded-xl"
+            effect="blur"
             onContextMenu={(e) => e.preventDefault()}
             draggable="false"
           />
@@ -37,10 +40,11 @@ function WCU() {
                   <Button className="Button1 bg-white text-[16px] font-medium border-2 border-emerald-400 rounded-md h-32 w-80">
                     <div className="p-0 justify-start">
                       <span className="flex ml-[-15px]">
-                        <img
+                        <LazyLoadImage
                           src={Icon1}
                           alt=""
                           className="w-[40px] h-[40px] rounded-lg"
+                          effect="blur"
                           onContextMenu={(e) => e.preventDefault()}
                           draggable="false"
                         />
@@ -58,10 +62,11 @@ function WCU() {
                   <Button className="Button2 bg-white text-[16px] font-medium border-2 border-emerald-400 rounded-md h-32 w-80">
                     <div className="p-0 justify-start">
                       <span className="flex">
-                        <img
+                        <LazyLoadImage
                           src={Icon2}
                           alt=""
                           className="w-[40px] h-[40px] rounded-lg"
+                          effect="blur"
                           onContextMenu={(e) => e.preventDefault()}
                           draggable="false"
                         />
@@ -80,10 +85,11 @@ function WCU() {
                   <Button className="Button3 bg-white text-[16px] font-medium border-2 border-emerald-400 rounded-md h-32 w-80">
                     <div className="p-0 justify-start">
                       <span className="flex ml-[-10px]">
-                        <img
+                        <LazyLoadImage
                           src={Icon3}
                           alt=""
                           className="w-[40px] h-[40px] rounded-lg"
+                          effect="blur"
                           onContextMenu={(e) => e.preventDefault()}
                           draggable="false"
                         />
@@ -100,10 +106,11 @@ function WCU() {
                   <Button className="Button4 bg-white text-[16px] font-medium border-2 border-emerald-400 rounded-md h-32 w-80">
                     <div className="p-0 justify-start">
                       <span className="flex">
-                        <img
+                        <LazyLoadImage
                           src={Icon4}
                           alt=""
                           className="w-[40px] h-[40px] ml-3 rounded-lg"
+                          effect="blur"
                           onContextMenu={(e) => e.preventDefault()}
                           draggable="false"
                         />
@@ -114,7 +121,7 @@ function WCU() {
                       <p className="text-[13px] mt-2 ml-3 text-left font-normal text-gray-600">
                         Engage in groundbreaking research initiatives
                         <br />
-                        that push the boundaries of medical knowledge
+                        that push the boundaries of medical knowledge
                       </p>
                     </div>
                   </Button>

@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import Doctor from "../../assets/Subramanian.png";
 import { Button } from "@nextui-org/react";
 import { Player } from "@lottiefiles/react-lottie-player";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import "./css/SpecialistDetails.css";
 
 const SpecialistDetails = () => {
@@ -10,10 +12,11 @@ const SpecialistDetails = () => {
     <>
       <div className="SD_Main flex justify-between gap-10 mt-[60px]">
         <div className="Specialist_Img w-[90%] mt-[-60px] ml-10 pt-[60px] h-[100vh] overflow-hidden">
-          <img
-            width={1000}
+          <LazyLoadImage
+            width={600}
             src={Doctor}
             alt=""
+            effect="blur"
             onContextMenu={(e) => e.preventDefault()}
             draggable="false"
             className=""
@@ -43,7 +46,7 @@ const SpecialistDetails = () => {
             </Link>
             <Link to="/Contact_Us">
               <Button className="rounded-md font-medium bg-transparent border-1 border-emerald-400">
-                Content Us
+                Contact Us
               </Button>
             </Link>
           </div>

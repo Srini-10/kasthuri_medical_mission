@@ -1,8 +1,10 @@
-import { Button } from "@nextui-org/react";
 import React from "react";
+import { Button } from "@nextui-org/react";
 import Doctor from "../../assets/Subramanian.png";
-import "./css/Specialist.css";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import "./css/Specialist.css";
 
 const Specialist = () => {
   return (
@@ -22,10 +24,11 @@ const Specialist = () => {
           </Link>
         </div>
         <div className="Specialist_Img w-[370px] ml-[670px] mt-[-89px] absolute h-[425px] overflow-hidden">
-          <img
-            width={400}
+          <LazyLoadImage
+            width={380}
             src={Doctor}
             alt=""
+            effect="blur"
             onContextMenu={(e) => e.preventDefault()}
             draggable="false"
           />

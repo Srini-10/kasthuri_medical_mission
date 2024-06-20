@@ -100,7 +100,7 @@ function BookForm() {
         <h1 className="Form_Title text-[35px] gap-[12px] text-black mt-2 ml-20 flex font-bold">
           Book <p className="text-emerald-400">Appointment</p>
         </h1>
-        <div className="Form_Grid grid w-[82%] pt-0 mx-20 mb-2 gap-4 grid-cols-2">
+        <div className="Form_Grid grid w-[82%] pt-0 mx-20 mt-3 mb-2 gap-4 grid-cols-2">
           <TextInput
             label="Name"
             name="Name"

@@ -1,4 +1,6 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import Logo from "../../assets/kmm.png";
 import Tick from "../../assets/Tick.svg";
 import "./css/AboutUs.css";
@@ -8,10 +10,11 @@ const About = () => {
     <>
       <div className="About_Main bg-emerald-50 w-[84%] py-[30px] px-[0] flex justify-center gap-[50px] h-auto mt-[0px]">
         <div className="About_Img w-[450px] bg-white rounded-lg">
-          <img
+          <LazyLoadImage
             src={Logo}
             alt=""
-            className="About_Image ml-[70px] select-none mt-[5px] rounded-full"
+            className="About_Image ml-[70px] select-none mt-[5px] rounded-full lazy-load-image"
+            effect="blur"
             onContextMenu={(e) => e.preventDefault()}
             draggable="false"
           />
@@ -23,18 +26,19 @@ const About = () => {
           <p className="About_Sub text-[14px]">
             The Kasthuri Medical Mission for public service. Public health to
             promote Medical education. Health science and to educate in regular
-            education system for medical students. This is an independent degree
-            ,diploma and certificate granting mission of tertiary education in
-            the field of medical science. The Overall mission is issue the teach
-            and conduct medical training classes and educate the people on
-            health,nutrition, sanitation and personal hygiene.
+            education system for medical students. This is an independent
+            degree, diploma and certificate granting mission of tertiary
+            education in the field of medical science. The Overall mission is
+            issue the teach and conduct medical training classes and educate the
+            people on health, nutrition, sanitation and personal hygiene.
           </p>
           <div className="About_Points gap-3 mt-[15px]">
             <span className="flex py-2 gap-3">
-              <img
-                className="w-[50px] mt-[-50px] h-auto"
+              <LazyLoadImage
+                className="w-[170px]"
                 src={Tick}
                 alt=""
+                effect="blur"
                 onContextMenu={(e) => e.preventDefault()}
                 draggable="false"
               />
@@ -49,11 +53,11 @@ const About = () => {
               </div>
             </span>
             <span className="flex py-2 gap-3">
-              {" "}
-              <img
-                className="w-[50px] mt-[-35px] h-auto"
+              <LazyLoadImage
+                className="w-[120px]"
                 src={Tick}
                 alt=""
+                effect="blur"
                 onContextMenu={(e) => e.preventDefault()}
                 draggable="false"
               />
@@ -72,4 +76,5 @@ const About = () => {
     </>
   );
 };
+
 export default About;

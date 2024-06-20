@@ -6,6 +6,8 @@ import "./css/Testimonial.css"; // Import the custom CSS file
 import People1 from "../../assets/People1.png";
 import People2 from "../../assets/People2.png";
 import People3 from "../../assets/People3.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const images = [People1, People2, People3];
 const totalImages = images.length;
@@ -33,8 +35,9 @@ const testimonialData = [
 
 const CarouselItem = ({ image, testimonial, author, location }) => (
   <div className="Carousel_Images w-full flex-shrink-0 pt-[50px]">
-    <img
+    <LazyLoadImage
       src={image}
+      effect="blur"
       alt={`Slide ${author}`}
       className="w-[100px] h-[100px] rounded-full border-2 border-gray-300 mx-auto"
       onContextMenu={(e) => e.preventDefault()}

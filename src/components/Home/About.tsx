@@ -3,6 +3,8 @@ import { Button } from "@nextui-org/react";
 import Design from "../../assets/Clinic-Building.svg";
 import HeartBeat from "../../assets/Heart-Beat.svg";
 import Tick from "../../assets/Tick.svg";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import "./css/About.css";
 import { Link } from "react-router-dom";
 
@@ -25,15 +27,16 @@ function About() {
               regular education system for medical students.where we are
               dedicated to transforming medical education and empowering
               aspiring medical professionals. Join us in our mission to learn
-              high-quality medical education which is accessible to all.
+              high-quality medical education which is accessible to all.
             </span>
           </p>
           <div className="Points gap-3 grid grid-cols-2 ml-[-3px] mb-2 mt-[15px]">
             <span className="flex py-1 gap-3">
-              <img
-                className="w-[50px] h-auto"
+              <LazyLoadImage
                 src={Tick}
                 alt=""
+                className="w-[50px] h-auto"
+                effect="blur"
                 onContextMenu={(e) => e.preventDefault()}
                 draggable="false"
               />
@@ -44,10 +47,11 @@ function About() {
               </div>
             </span>
             <span className="Point2 flex py-1 ml-[-45px] gap-3">
-              <img
-                className="w-[50px] h-auto"
+              <LazyLoadImage
                 src={Tick}
                 alt=""
+                className="w-[50px] h-auto"
+                effect="blur"
                 onContextMenu={(e) => e.preventDefault()}
                 draggable="false"
               />
@@ -58,11 +62,11 @@ function About() {
               </div>
             </span>
             <span className="flex py-1 gap-3">
-              {" "}
-              <img
-                className="w-[50px] h-auto"
+              <LazyLoadImage
                 src={Tick}
                 alt=""
+                className="w-[50px] h-auto"
+                effect="blur"
                 onContextMenu={(e) => e.preventDefault()}
                 draggable="false"
               />
@@ -79,14 +83,21 @@ function About() {
             </Button>
           </Link>
         </div>
-        <div className="About_Img_Container absolute w-[0px] mt-[30px] ml-[900px]">
-          <div className="w-[100px] absolute mt-[-50px] right-[-320px]">
-            <img src={HeartBeat} alt="" />
+        <div className="About_Img_Container absolute w-[0px] mt-[0px] ml-[900px]">
+          <div className="w-[100px] absolute mt-[-20px] right-[-320px]">
+            <LazyLoadImage
+              src={HeartBeat}
+              alt=""
+              effect="blur"
+              onContextMenu={(e) => e.preventDefault()}
+              draggable="false"
+            />
           </div>
-          <img
+          <LazyLoadImage
             src={Design}
             alt="Doctor"
             className="About_Img absolute"
+            effect="blur"
             onContextMenu={(e) => e.preventDefault()}
             draggable="false"
           />

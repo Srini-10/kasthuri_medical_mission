@@ -12,6 +12,8 @@ import {
   ModalProps,
   useDisclosure,
 } from "@nextui-org/react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 import Tick from "../../assets/Tick.svg";
 import Record1 from "../../assets/Records/Record1.jpg";
@@ -30,7 +32,10 @@ const AboutSpecialist = () => {
 
   return (
     <>
-      <div id="About_Me" className="SD_MainAS flex bg-emerald-50 justify-between gap-10 pt-[10px]">
+      <div
+        id="About_Me"
+        className="SD_MainAS flex bg-emerald-50 justify-between gap-10 pt-[10px]"
+      >
         <div className="Container_Design absolute ml-[36%] mt-20 rotate-[50deg] transform scale-y-[-1]">
           <Player
             autoplay
@@ -141,9 +146,10 @@ const AboutSpecialist = () => {
                     <ModalBody className=" mx-3 gap-10">
                       <div className="flex gap-4">
                         <div className="Img_Model_Container flex flex-col h-[100%] bg-gray-100 p-3 rounded-xl gap-2">
-                          <img
+                          <LazyLoadImage
                             src={Record1}
                             alt=""
+                            effect="blur"
                             onContextMenu={(e) => e.preventDefault()}
                             draggable="false"
                             className="Img_Rec bg-black rounded-xl"
@@ -156,9 +162,10 @@ const AboutSpecialist = () => {
                           </p>
                         </div>
                         <div className="Img_Model_Container flex flex-col h-[100%] bg-gray-100 p-3 rounded-xl gap-2">
-                          <img
+                          <LazyLoadImage
                             src={Record2}
                             alt=""
+                            effect="blur"
                             onContextMenu={(e) => e.preventDefault()}
                             draggable="false"
                             className="Img_Rec bg-black rounded-xl"
@@ -171,9 +178,10 @@ const AboutSpecialist = () => {
                           </p>
                         </div>
                         <div className="Img_Model_Container flex flex-col h-[100%] bg-gray-100 p-3 rounded-xl gap-2">
-                          <img
+                          <LazyLoadImage
                             src={Record3}
                             alt=""
+                            effect="blur"
                             onContextMenu={(e) => e.preventDefault()}
                             draggable="false"
                             className="Img_Rec bg-black rounded-xl"
@@ -188,9 +196,10 @@ const AboutSpecialist = () => {
                       </div>
                       <div className="flex gap-4">
                         <div className="Img_Model_Container flex flex-col h-[100%] bg-gray-100 p-3 rounded-xl gap-2">
-                          <img
+                          <LazyLoadImage
                             src={Record4}
                             alt=""
+                            effect="blur"
                             onContextMenu={(e) => e.preventDefault()}
                             draggable="false"
                             className="Img_Rec bg-black rounded-xl"
@@ -203,9 +212,10 @@ const AboutSpecialist = () => {
                           </p>
                         </div>
                         <div className="Img_Model_Container flex flex-col h-[100%] mt-[-150px] bg-gray-100 p-3 rounded-xl gap-2">
-                          <img
+                          <LazyLoadImage
                             src={Record5}
                             alt=""
+                            effect="blur"
                             onContextMenu={(e) => e.preventDefault()}
                             draggable="false"
                             className="Img_Rec bg-black rounded-xl"
@@ -218,9 +228,10 @@ const AboutSpecialist = () => {
                           </p>
                         </div>
                         <div className="Img_Model_Container flex flex-col h-[100%] mt-[-150px] bg-gray-100 p-3 rounded-xl gap-2">
-                          <img
+                          <LazyLoadImage
                             src={Record6}
                             alt=""
+                            effect="blur"
                             onContextMenu={(e) => e.preventDefault()}
                             draggable="false"
                             className="Img_Rec bg-black rounded-xl"
@@ -250,9 +261,10 @@ const AboutSpecialist = () => {
             onClick={onOpen}
             className="Image_Records w-[100%] overflow-hidden max-h-[180px] min-h-[180px] shadow-md border-1 brightness-[85%] border-gray-300 rounded-md -mt-0"
           >
-            <img
+            <LazyLoadImage
               src={Record1}
               alt=""
+              effect="blur"
               onContextMenu={(e) => e.preventDefault()}
               draggable="false"
               className="Img_Rec bg-black"
@@ -262,9 +274,10 @@ const AboutSpecialist = () => {
             onClick={onOpen}
             className="Image_Records w-[100%] overflow-hidden max-h-[180px] min-h-[180px] shadow-md border-1 brightness-[85%] border-gray-300 rounded-md -mt-0"
           >
-            <img
+            <LazyLoadImage
               src={Record2}
               alt=""
+              effect="blur"
               onContextMenu={(e) => e.preventDefault()}
               draggable="false"
               className="Img_Rec bg-black"
@@ -274,9 +287,10 @@ const AboutSpecialist = () => {
             onClick={onOpen}
             className="Image_Records w-[100%] overflow-hidden max-h-[180px] min-h-[180px] shadow-md border-1 brightness-[85%] border-gray-300 rounded-md -mt-16"
           >
-            <img
+            <LazyLoadImage
               src={Record3}
               alt=""
+              effect="blur"
               onContextMenu={(e) => e.preventDefault()}
               draggable="false"
               className="Img_Rec bg-black"
@@ -286,9 +300,10 @@ const AboutSpecialist = () => {
             onClick={onOpen}
             className="Image_Records w-[100%] overflow-hidden max-h-[180px] min-h-[180px] shadow-md border-1 brightness-[85%] border-gray-300 rounded-md -mt-16"
           >
-            <img
+            <LazyLoadImage
               src={Record4}
               alt=""
+              effect="blur"
               onContextMenu={(e) => e.preventDefault()}
               draggable="false"
               className="Img_Rec bg-black"
@@ -298,9 +313,10 @@ const AboutSpecialist = () => {
             onClick={onOpen}
             className="Image_Records w-[100%] overflow-hidden max-h-[180px] min-h-[180px] shadow-md border-1 brightness-[85%] border-gray-300 rounded-md -mt-16"
           >
-            <img
+            <LazyLoadImage
               src={Record5}
               alt=""
+              effect="blur"
               onContextMenu={(e) => e.preventDefault()}
               draggable="false"
               className="Img_Rec bg-black"
@@ -310,9 +326,10 @@ const AboutSpecialist = () => {
             onClick={onOpen}
             className="Image_Records w-[100%] overflow-hidden max-h-[180px] min-h-[180px] shadow-md border-1 brightness-[85%] border-gray-300 rounded-md -mt-16"
           >
-            <img
+            <LazyLoadImage
               src={Record6}
               alt=""
+              effect="blur"
               onContextMenu={(e) => e.preventDefault()}
               draggable="false"
               className="Img_Rec bg-black"

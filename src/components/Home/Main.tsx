@@ -2,6 +2,8 @@ import React from "react";
 import Doctor from "../../assets/Doctor.jpeg";
 import { Button } from "@nextui-org/react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import "./css/Main.css";
 
 function Main() {
@@ -9,58 +11,62 @@ function Main() {
     <>
       <div className="Main w-full mt-[60px] overflow-hidden relative">
         <div className="Main_Img overflow-hidden w-[100%] h-[92.5vh]">
-          <img
+          <LazyLoadImage
             src={Doctor}
             alt="Doctor"
+            effect="blur"
+            className="brightness-[70%] Bg_Main"
             style={{
               height: "auto",
               width: "100%",
               userSelect: "none",
               pointerEvents: "none",
             }}
-            className="brightness-[70%] Bg_Main"
             onContextMenu={(e) => e.preventDefault()}
             draggable="false"
           />
         </div>
         <div className="Main_Over absolute mt-[-600px] ml-32">
           <div className="Design_Main flex absolute ml-[990px] mt-[-50px] backdrop-blur-sm justify-end gap-2 rounded-xl p-1 w-[165px] items-center bg-transparent border-2 border-emerald-400">
-            <img
+            <LazyLoadImage
               src="https://avatars.githubusercontent.com/u/30373425?v=4"
               alt="Doctor"
+              effect="blur"
+              className="brightness-100 rounded-full border-gray-300 border-1"
               style={{
                 width: "25px",
                 height: "25px",
                 userSelect: "none",
                 pointerEvents: "none",
               }}
-              className="brightness-100 rounded-full border-gray-300 border-1"
               onContextMenu={(e) => e.preventDefault()}
               draggable="false"
             />
-            <img
+            <LazyLoadImage
               src="https://i.pravatar.cc/150?u=a04258114e29026702d"
               alt="Doctor"
+              effect="blur"
+              className="brightness-100 rounded-full border-gray-300 border-1 ml-[-20px]"
               style={{
-                width: "25px",
+                minWidth: "25px",
                 height: "25px",
                 userSelect: "none",
                 pointerEvents: "none",
               }}
-              className="brightness-100 rounded-full border-gray-300 border-1 ml-[-20px]"
               onContextMenu={(e) => e.preventDefault()}
               draggable="false"
             />
-            <img
+            <LazyLoadImage
               src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
               alt="Doctor"
+              effect="blur"
+              className="brightness-100 rounded-full border-gray-300 border-1 ml-[-20px]"
               style={{
-                width: "25px",
+                minWidth: "25px",
                 height: "25px",
                 userSelect: "none",
                 pointerEvents: "none",
               }}
-              className="brightness-100 rounded-full border-gray-300 border-1 ml-[-20px]"
               onContextMenu={(e) => e.preventDefault()}
               draggable="false"
             />

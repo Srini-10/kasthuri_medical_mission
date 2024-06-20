@@ -20,7 +20,7 @@ const Testimonial = () => {
           <div className="relative">
             <span className="absolute ml-[-170px] mt-[80px]">
               <img
-                className="w-[35px] p-1 absolute rounded-full"
+                className="w-[35px] h-[35px] p-1 absolute rounded-full"
                 src={People1}
                 alt=""
               />
@@ -28,7 +28,7 @@ const Testimonial = () => {
             </span>
             <span className="absolute ml-[-440px] mt-[0px]">
               <img
-                className="w-[35px] p-1 absolute rounded-full"
+                className="w-[35px] h-[35px] p-1 absolute rounded-full"
                 src={People2}
                 alt=""
               />
@@ -36,7 +36,7 @@ const Testimonial = () => {
             </span>
             <span className="absolute ml-[-310px] mt-[-40px]">
               <img
-                className="w-[35px] p-1 absolute rounded-full"
+                className="w-[35px] h-[35px] p-1 absolute rounded-full"
                 src={People3}
                 alt=""
               />
@@ -44,7 +44,7 @@ const Testimonial = () => {
             </span>
             <span className="absolute ml-[-90px] mt-[-200px]">
               <img
-                className="w-[35px] p-1 absolute rounded-full"
+                className="w-[35px] h-[35px] p-1 absolute rounded-full"
                 src={People4}
                 alt=""
               />
@@ -52,7 +52,7 @@ const Testimonial = () => {
             </span>
             <span className="absolute ml-[-910px] mt-[-210px]">
               <img
-                className="w-[35px] p-1 absolute rounded-full"
+                className="w-[35px] h-[35px] p-1 absolute rounded-full"
                 src={People5}
                 alt=""
               />
@@ -60,7 +60,7 @@ const Testimonial = () => {
             </span>
             <span className="absolute ml-[-600px] mt-[-280px]">
               <img
-                className="w-[35px] p-1 absolute rounded-full"
+                className="w-[35px] h-[35px] p-1 absolute rounded-full"
                 src={People6}
                 alt=""
               />
@@ -68,7 +68,7 @@ const Testimonial = () => {
             </span>
             <span className="absolute ml-[-700px] mt-[-0px]">
               <img
-                className="w-[35px] p-1 absolute rounded-full"
+                className="w-[35px] h-[35px] p-1 absolute rounded-full"
                 src={People7}
                 alt=""
               />
@@ -76,7 +76,7 @@ const Testimonial = () => {
             </span>
             <span className="absolute ml-[-400px] mt-[-190px]">
               <img
-                className="w-[35px] p-1 absolute rounded-full"
+                className="w-[35px] h-[35px] p-1 absolute rounded-full"
                 src={People7}
                 alt=""
               />

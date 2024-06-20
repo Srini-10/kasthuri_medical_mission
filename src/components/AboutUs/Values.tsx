@@ -1,16 +1,18 @@
 import React from "react";
-import Image from "../../assets/Doctor.jpeg";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import Design from "../../assets/Heart_Beat.svg";
 import "./css/Value.css";
 
-function Values() {
+const Values = () => {
   return (
     <>
       <div className="Value">
-        <img
+        <LazyLoadImage
           src={Design}
-          className="Design_Image w-72 opacity-50 absolute ml-[77%] mt-[-60px]"
+          className="Design_Image w-72 opacity-50 absolute ml-[77%] mt-[-60px] lazy-load-image"
           alt=""
+          effect="opacity"
           onContextMenu={(e) => e.preventDefault()}
           draggable="false"
         />
@@ -72,6 +74,6 @@ function Values() {
       </div>
     </>
   );
-}
+};
 
 export default Values;

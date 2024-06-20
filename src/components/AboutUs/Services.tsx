@@ -1,4 +1,6 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import Tick from "../../assets/Tick.svg";
 import Icon1 from "../../assets/Clinic-Building.svg";
 import Icon2 from "../../assets/Doctor_Icon.svg";
@@ -26,10 +28,11 @@ const Services = () => {
         </div>
         <div className="Services_Points gap-5 mx-auto justify-center mt-[27px] flex">
           <span className="py-2 gap-3 w-[350px]">
-            <img
-              className="w-[55px] h-auto"
+            <LazyLoadImage
               src={Icon1}
               alt=""
+              className="w-[55px] h-auto lazy-load-image"
+              effect="blur"
               onContextMenu={(e) => e.preventDefault()}
               draggable="false"
             />
@@ -46,10 +49,11 @@ const Services = () => {
             </div>
           </span>
           <span className="py-2 gap-3 w-[350px]">
-            <img
-              className="w-[55px] h-auto"
+            <LazyLoadImage
               src={Icon2}
               alt=""
+              className="w-[55px] h-auto lazy-load-image"
+              effect="blur"
               onContextMenu={(e) => e.preventDefault()}
               draggable="false"
             />
@@ -67,10 +71,11 @@ const Services = () => {
             </div>
           </span>
           <span className="py-2 gap-3 w-[350px]">
-            <img
-              className="w-[55px] h-auto"
+            <LazyLoadImage
               src={Icon3}
               alt=""
+              className="w-[55px] h-auto lazy-load-image"
+              effect="blur"
               onContextMenu={(e) => e.preventDefault()}
               draggable="false"
             />
@@ -92,4 +97,5 @@ const Services = () => {
     </>
   );
 };
+
 export default Services;

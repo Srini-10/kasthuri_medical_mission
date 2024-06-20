@@ -1,4 +1,6 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import Form from "../../assets/Folder.svg";
 import "./css/Contact.css";
 
@@ -10,8 +12,8 @@ const Contact = () => {
           Contact <p className="text-emerald-400">Us</p>
         </h1>
         <div className="Contact_Contents flex">
-          <img
-            className="Contact_Img mt-[25px] ml-[-30px] rounded-xl"
+          <LazyLoadImage
+            className="Contact_Img mt-[25px] ml-[-30px] rounded-xl lazy-load-image"
             src={Form}
             alt=""
             onContextMenu={(e) => e.preventDefault()}

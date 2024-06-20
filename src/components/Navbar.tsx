@@ -13,6 +13,8 @@ import {
 import Logo from "../assets/kmm.png";
 import { useLocation } from "react-router-dom";
 import "./css/Navbar.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 export default function Nav() {
   const menuItems = [
@@ -45,7 +47,8 @@ export default function Nav() {
 
       <NavbarContent className="navbar-content">
         <NavbarBrand>
-          <img
+          <LazyLoadImage
+            effect="blur"
             src={Logo}
             alt=""
             className="w-[45px] select-none h-auto mr-2"
