@@ -59,7 +59,7 @@ export default function Nav() {
         <NavbarItem>
           <Link
             color="foreground"
-            href="../pages/Home.tsx"
+            href="/"
             className={`${
               pathname === "/" ? "text-emerald-400 font-semibold" : ""
             }`}
@@ -70,7 +70,7 @@ export default function Nav() {
         <NavbarItem>
           <Link
             color="foreground"
-            href="../pages/AboutUs.tsx"
+            href="/About_Us"
             className={`${
               pathname === "/About_Us" ? "text-emerald-400 font-semibold" : ""
             }`}
@@ -80,7 +80,7 @@ export default function Nav() {
         </NavbarItem>
         <NavbarItem>
           <Link
-            href="../pages/Courses.tsx"
+            href="/Courses"
             aria-current="page"
             color="foreground"
             className={`${
@@ -93,7 +93,7 @@ export default function Nav() {
         <NavbarItem>
           <Link
             color="foreground"
-            href="../pages/ContactUs.tsx"
+            href="/Contact_Us"
             className={`${
               pathname === "/Contact_Us" ? "text-emerald-400 font-semibold" : ""
             }`}
@@ -115,7 +115,7 @@ export default function Nav() {
             >
               <Button
                 as={Link}
-                href="../pages/BookApp.tsx"
+                href="/Book_Appointment"
                 variant="flat"
                 className="text-emerald-400 rounded-md font-medium"
               >

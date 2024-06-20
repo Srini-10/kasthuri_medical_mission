@@ -15,7 +15,7 @@ const Specialist = () => {
           <p className="Specialist_Sub text-gray-700">
             M.D.ARCGP, (London), Ph.D. (USA)
           </p>
-          <Link to="../../pages/Specialist.tsx">
+          <Link to="/Specialist">
             <Button className="Specialist_Button mt-6 bg-white rounded-md font-medium">
               Know More
             </Button>
