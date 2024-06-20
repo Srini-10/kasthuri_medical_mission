@@ -13,6 +13,7 @@ import {
 import Logo from "../assets/kmm.png";
 import { useLocation } from "react-router-dom";
 import "./css/Navbar.css";
+import AboutUs from "../pages/AboutUs.tsx";
 
 export default function Nav() {
   const menuItems = [
@@ -70,7 +71,7 @@ export default function Nav() {
         <NavbarItem>
           <Link
             color="foreground"
-            href="/About_Us"
+            ref={AboutUs}
             className={`${
               pathname === "/About_Us" ? "text-emerald-400 font-semibold" : ""
             }`}
