@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./css/SpecialistDetails.css";
-import Doctor from "../../assets/Subramanian.png";
 import {
   Button,
   Modal,
@@ -24,6 +23,7 @@ import Record5 from "../../assets/Records/Record5.jpg";
 import Record6 from "../../assets/Records/Record6.jpg";
 import "./css/About_Specialist.css";
 import { Player } from "@lottiefiles/react-lottie-player";
+import LazyLoad from "react-lazyload";
 
 const AboutSpecialist = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -57,7 +57,8 @@ const AboutSpecialist = () => {
           </p>
           <div className="SD_Points mt-[25px] p-2 w-[70%] grid grid-cols-2 rounded-md">
             <li className="list-none m-1 flex gap-2">
-              <img
+              <LazyLoadImage
+                effect="blur"
                 className="w-[23px] h-auto"
                 src={Tick}
                 alt=""
@@ -67,7 +68,8 @@ const AboutSpecialist = () => {
               <p>About Topics</p>
             </li>
             <li className="list-none m-1 flex gap-2">
-              <img
+              <LazyLoadImage
+                effect="blur"
                 className="w-[23px] h-auto"
                 src={Tick}
                 alt=""
@@ -77,7 +79,8 @@ const AboutSpecialist = () => {
               <p>About Topics</p>
             </li>
             <li className="list-none m-1 flex gap-2">
-              <img
+              <LazyLoadImage
+                effect="blur"
                 className="w-[23px] h-auto"
                 src={Tick}
                 alt=""
@@ -87,7 +90,8 @@ const AboutSpecialist = () => {
               <p>About Topics</p>
             </li>
             <li className="list-none m-1 flex gap-2">
-              <img
+              <LazyLoadImage
+                effect="blur"
                 className="w-[23px] h-auto"
                 src={Tick}
                 alt=""
@@ -97,7 +101,8 @@ const AboutSpecialist = () => {
               <p>About Topics</p>
             </li>
             <li className="list-none m-1 flex gap-2">
-              <img
+              <LazyLoadImage
+                effect="blur"
                 className="w-[23px] h-auto"
                 src={Tick}
                 alt=""
@@ -107,7 +112,8 @@ const AboutSpecialist = () => {
               <p>About Topics</p>
             </li>
             <li className="list-none m-1 flex gap-2">
-              <img
+              <LazyLoadImage
+                effect="blur"
                 className="w-[23px] h-auto"
                 src={Tick}
                 alt=""
@@ -257,84 +263,97 @@ const AboutSpecialist = () => {
           </div>
         </div>
         <div className="Specialist_Img w-[90%] grid grid-cols-2 gap-3 mt-[50px] mr-10 -ml-10 pt-[80px] h-[92vh] overflow-hidden">
-          <button
-            onClick={onOpen}
-            className="Image_Records w-[100%] overflow-hidden max-h-[180px] min-h-[180px] shadow-md border-1 brightness-[85%] border-gray-300 rounded-md -mt-0"
-          >
-            <LazyLoadImage
-              src={Record1}
-              alt=""
-              effect="blur"
-              onContextMenu={(e) => e.preventDefault()}
-              draggable="false"
-              className="Img_Rec bg-black"
-            />
-          </button>
-          <button
-            onClick={onOpen}
-            className="Image_Records w-[100%] overflow-hidden max-h-[180px] min-h-[180px] shadow-md border-1 brightness-[85%] border-gray-300 rounded-md -mt-0"
-          >
-            <LazyLoadImage
-              src={Record2}
-              alt=""
-              effect="blur"
-              onContextMenu={(e) => e.preventDefault()}
-              draggable="false"
-              className="Img_Rec bg-black"
-            />
-          </button>
-          <button
-            onClick={onOpen}
-            className="Image_Records w-[100%] overflow-hidden max-h-[180px] min-h-[180px] shadow-md border-1 brightness-[85%] border-gray-300 rounded-md -mt-16"
-          >
-            <LazyLoadImage
-              src={Record3}
-              alt=""
-              effect="blur"
-              onContextMenu={(e) => e.preventDefault()}
-              draggable="false"
-              className="Img_Rec bg-black"
-            />
-          </button>
-          <button
-            onClick={onOpen}
-            className="Image_Records w-[100%] overflow-hidden max-h-[180px] min-h-[180px] shadow-md border-1 brightness-[85%] border-gray-300 rounded-md -mt-16"
-          >
-            <LazyLoadImage
-              src={Record4}
-              alt=""
-              effect="blur"
-              onContextMenu={(e) => e.preventDefault()}
-              draggable="false"
-              className="Img_Rec bg-black"
-            />
-          </button>
-          <button
-            onClick={onOpen}
-            className="Image_Records w-[100%] overflow-hidden max-h-[180px] min-h-[180px] shadow-md border-1 brightness-[85%] border-gray-300 rounded-md -mt-16"
-          >
-            <LazyLoadImage
-              src={Record5}
-              alt=""
-              effect="blur"
-              onContextMenu={(e) => e.preventDefault()}
-              draggable="false"
-              className="Img_Rec bg-black"
-            />
-          </button>
-          <button
-            onClick={onOpen}
-            className="Image_Records w-[100%] overflow-hidden max-h-[180px] min-h-[180px] shadow-md border-1 brightness-[85%] border-gray-300 rounded-md -mt-16"
-          >
-            <LazyLoadImage
-              src={Record6}
-              alt=""
-              effect="blur"
-              onContextMenu={(e) => e.preventDefault()}
-              draggable="false"
-              className="Img_Rec bg-black"
-            />
-          </button>
+          <LazyLoad effect="blur">
+            <button
+              onClick={onOpen}
+              className="Image_Records w-[100%] overflow-hidden max-h-[180px] min-h-[180px] shadow-md border-1 brightness-[85%] border-gray-300 rounded-md -mt-0"
+            >
+              <LazyLoadImage
+                src={Record1}
+                alt=""
+                effect="blur"
+                onContextMenu={(e) => e.preventDefault()}
+                draggable="false"
+                className="Img_Rec bg-black"
+              />
+            </button>
+          </LazyLoad>
+          <LazyLoad effect="blur">
+            <button
+              onClick={onOpen}
+              className="Image_Records w-[100%] overflow-hidden max-h-[180px] min-h-[180px] shadow-md border-1 brightness-[85%] border-gray-300 rounded-md -mt-0"
+            >
+              <LazyLoadImage
+                src={Record2}
+                alt=""
+                effect="blur"
+                onContextMenu={(e) => e.preventDefault()}
+                draggable="false"
+                className="Img_Rec bg-black"
+              />
+            </button>
+          </LazyLoad>
+          <LazyLoad effect="blur">
+            <button
+              onClick={onOpen}
+              className="Image_Records w-[100%] overflow-hidden max-h-[180px] min-h-[180px] shadow-md border-1 brightness-[85%] border-gray-300 rounded-md -mt-0"
+            >
+              <LazyLoadImage
+                src={Record3}
+                alt=""
+                effect="blur"
+                onContextMenu={(e) => e.preventDefault()}
+                draggable="false"
+                className="Img_Rec bg-black"
+              />
+            </button>
+          </LazyLoad>
+          <LazyLoad effect="blur">
+            <button
+              onClick={onOpen}
+              className="Image_Records w-[100%] overflow-hidden max-h-[180px] min-h-[180px] shadow-md border-1 brightness-[85%] border-gray-300 rounded-md -mt-0"
+            >
+              <LazyLoadImage
+                src={Record4}
+                alt=""
+                effect="blur"
+                onContextMenu={(e) => e.preventDefault()}
+                draggable="false"
+                className="Img_Rec bg-black"
+              />
+            </button>
+          </LazyLoad>
+          <LazyLoad effect="blur">
+            <button
+              onClick={onOpen}
+              className="Image_Records w-[100%] overflow-hidden max-h-[180px] min-h-[180px] shadow-md border-1 brightness-[85%] border-gray-300 rounded-md -mt-0"
+            >
+              <LazyLoadImage
+                src={Record5}
+                alt=""
+                effect="blur"
+                onContextMenu={(e) => e.preventDefault()}
+                draggable="false"
+                className="Img_Rec bg-black"
+              />
+            </button>
+          </LazyLoad>
+
+          <LazyLoad effect="blur">
+            <button
+              onClick={onOpen}
+              className="Image_Records w-[100%] overflow-hidden max-h-[180px] min-h-[180px] shadow-md border-1 brightness-[85%] border-gray-300 rounded-md -mt-0"
+            >
+              <LazyLoadImage
+                src={Record6}
+                alt=""
+                effect="blur"
+                onContextMenu={(e) => e.preventDefault()}
+                draggable="false"
+                className="Img_Rec bg-black"
+              />
+            </button>
+          </LazyLoad>
         </div>
       </div>
     </>

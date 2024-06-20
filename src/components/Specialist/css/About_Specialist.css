@@ -28,9 +28,8 @@
   .SD_Add {
     width: 100%;
   }
-
   .Image_Records:hover .Img_Rec {
-    transform: scale(1.5);
+    transform: scale(1.05);
   }
   .Container_Design {
     display: none;
@@ -43,12 +42,15 @@
   transition: box-shadow 0.3s ease-in-out;
 }
 
+/* Define initial state of .Img_Rec */
 .Img_Rec {
   transition: transform 0.3s ease-in-out;
   transform: scale(1);
 }
+
+/* Apply hover effect directly on .Img_Rec */
 .Image_Records:hover .Img_Rec {
-  transform: scale(1.05);
+  transform: scale(1.005);
 }
 
 /* Custom styles to center the modal */
