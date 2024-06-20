@@ -13,7 +13,6 @@ import {
 import Logo from "../assets/kmm.png";
 import { useLocation } from "react-router-dom";
 import "./css/Navbar.css";
-import AboutUs from "../pages/AboutUs.tsx";
 
 export default function Nav() {
   const menuItems = [
@@ -60,7 +59,7 @@ export default function Nav() {
         <NavbarItem>
           <Link
             color="foreground"
-            href="/"
+            href="../pages/Home.tsx"
             className={`${
               pathname === "/" ? "text-emerald-400 font-semibold" : ""
             }`}
@@ -71,7 +70,7 @@ export default function Nav() {
         <NavbarItem>
           <Link
             color="foreground"
-            ref={AboutUs}
+            href="../pages/AboutUs.tsx"
             className={`${
               pathname === "/About_Us" ? "text-emerald-400 font-semibold" : ""
             }`}
@@ -81,7 +80,7 @@ export default function Nav() {
         </NavbarItem>
         <NavbarItem>
           <Link
-            href="/Courses"
+            href="../pages/Courses.tsx"
             aria-current="page"
             color="foreground"
             className={`${
@@ -94,7 +93,7 @@ export default function Nav() {
         <NavbarItem>
           <Link
             color="foreground"
-            href="/Contact_Us"
+            href="../pages/ContactUs.tsx"
             className={`${
               pathname === "/Contact_Us" ? "text-emerald-400 font-semibold" : ""
             }`}
@@ -116,7 +115,7 @@ export default function Nav() {
             >
               <Button
                 as={Link}
-                href="/Book_Appointment"
+                href="../pages/BookApp.tsx"
                 variant="flat"
                 className="text-emerald-400 rounded-md font-medium"
               >
