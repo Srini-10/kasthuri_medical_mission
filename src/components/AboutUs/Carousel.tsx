@@ -17,13 +17,13 @@ const testimonialData = [
     testimonial:
       "Kasthuri Medical Mission has truly transformed my understanding of medicine. The hands-on training and supportive faculty have prepared me well for medical school and beyond.",
     author: "Sarath T",
-    location: "Erode, Tamil Nadu",
+    location: "Salem, Tamil Nadu",
   },
   {
     testimonial:
       "I'm grateful for the personalized guidance I received at Kasthuri Medical Mission. The faculty's expertise and the immersive learning experiences have shaped me into a confident medical professional.",
     author: "Jayanthi S",
-    location: "Erode, Tamil Nadu",
+    location: "Chennai, Tamil Nadu",
   },
   {
     testimonial:

@@ -35,6 +35,7 @@
     display: none;
   }
 }
+
 .Button {
   background-color: transparent; /* Ensure the background is transparent */
   border: none; /* Remove default border */

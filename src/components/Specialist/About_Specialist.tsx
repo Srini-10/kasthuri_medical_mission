@@ -296,7 +296,7 @@ const AboutSpecialist = () => {
           <LazyLoad effect="blur">
             <button
               onClick={onOpen}
-              className="Image_Records w-[100%] overflow-hidden max-h-[180px] min-h-[180px] shadow-md border-1 brightness-[85%] border-gray-300 rounded-md -mt-0"
+              className="Image_Records w-[100%] overflow-hidden max-h-[180px] min-h-[180px] shadow-md border-1 brightness-[85%] border-gray-300 rounded-md -mt-10"
             >
               <LazyLoadImage
                 src={Record3}
@@ -311,7 +311,7 @@ const AboutSpecialist = () => {
           <LazyLoad effect="blur">
             <button
               onClick={onOpen}
-              className="Image_Records w-[100%] overflow-hidden max-h-[180px] min-h-[180px] shadow-md border-1 brightness-[85%] border-gray-300 rounded-md -mt-0"
+              className="Image_Records w-[100%] overflow-hidden max-h-[180px] min-h-[180px] shadow-md border-1 brightness-[85%] border-gray-300 rounded-md -mt-10"
             >
               <LazyLoadImage
                 src={Record4}
@@ -326,7 +326,7 @@ const AboutSpecialist = () => {
           <LazyLoad effect="blur">
             <button
               onClick={onOpen}
-              className="Image_Records w-[100%] overflow-hidden max-h-[180px] min-h-[180px] shadow-md border-1 brightness-[85%] border-gray-300 rounded-md -mt-0"
+              className="Image_Records w-[100%] overflow-hidden max-h-[180px] min-h-[180px] shadow-md border-1 brightness-[85%] border-gray-300 rounded-md -mt-10"
             >
               <LazyLoadImage
                 src={Record5}
@@ -342,7 +342,7 @@ const AboutSpecialist = () => {
           <LazyLoad effect="blur">
             <button
               onClick={onOpen}
-              className="Image_Records w-[100%] overflow-hidden max-h-[180px] min-h-[180px] shadow-md border-1 brightness-[85%] border-gray-300 rounded-md -mt-0"
+              className="Image_Records w-[100%] overflow-hidden max-h-[180px] min-h-[180px] shadow-md border-1 brightness-[85%] border-gray-300 rounded-md -mt-10"
             >
               <LazyLoadImage
                 src={Record6}
