@@ -6,7 +6,7 @@
     margin-right: 0px;
   }
   .Contact_Header_Main {
-    width: 111.7%;
+    min-width: 111.7%;
   }
   .Contact_Header {
     flex-wrap: wrap;

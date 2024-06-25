@@ -83,6 +83,5 @@
   }
 }
 
-@media (min-width: 641px) {
-  /* Styles for larger screens can be added here if needed */
+@media (min-width: 768px) and (max-width: 1024px) {
 }

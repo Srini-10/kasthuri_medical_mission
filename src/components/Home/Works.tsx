@@ -1,7 +1,5 @@
 import React from "react";
 import { Button, Link } from "@nextui-org/react";
-import Logo from "../../assets/Doctor.jpeg";
-import gif from "../../assets/Arrow_Animation.gif";
 import { Player } from "@lottiefiles/react-lottie-player";
 import "./css/Works.css";
 

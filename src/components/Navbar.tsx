@@ -23,6 +23,7 @@ export default function Nav() {
     { name: "Our Courses", path: "/Courses" },
     { name: "Contact Us", path: "/Contact_Us" },
     { name: "Book Appointment", path: "/Book_Appointment" },
+    { name: "Our Founder", path: "/Founder" },
   ];
 
   const { pathname } = useLocation();

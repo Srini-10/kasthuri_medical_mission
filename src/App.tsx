@@ -41,7 +41,7 @@ function App() {
               <Nav />
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/Specialist" element={<Specialist />} />
+                <Route path="/Founder" element={<Specialist />} />
                 <Route path="/About_Us" element={<AboutUs />} />
                 <Route path="/Courses" element={<Course />} />
                 <Route path="/Contact_Us" element={<ContactUs />} />

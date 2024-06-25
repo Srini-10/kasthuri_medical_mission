@@ -11,8 +11,8 @@ const Contact = () => {
   return (
     <>
       <div className="Contact_Main mt-[60px] mb-[50px]">
-        <div className="Contact_Header_Main bg-emerald-100">
-          <div className="Contact_Header pl-20 pr-20 w-[1430px] justify-between mx-auto relative flex pt-[25px] pb-[0px]">
+        <div className="Contact_Header_Main w-[100%] bg-emerald-100">
+          <div className="Contact_Header pl-[5%] pr-[8%] max-w-[100%] justify-between mx-auto relative flex pt-[25px] pb-[0px]">
             <div className="Contact_Title">
               <h1 className="text-[60px] flex mt-[80px] gap-2 font-bold">
                 Contact <p className="text-emerald-400">Us</p>
@@ -78,7 +78,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="Contact_Form bg-white shadow-md absolute -mt-[70px] px-6 py-10 rounded-xl left-1/2 transform -translate-x-1/2 w-[940px] h-[480px]">
+        <div className="Contact_Form bg-white shadow-md absolute -mt-[70px] px-6 py-10 rounded-xl left-1/2 transform -translate-x-1/2 w-[830px] h-[480px]">
           <ContactForm />
         </div>
       </div>
