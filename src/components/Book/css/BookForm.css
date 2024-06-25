@@ -11,7 +11,7 @@
   }
   .Form_Grid {
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    min-width: 128%;
+    min-width: 118%;
     margin: auto -40px auto -40px;
   }
   .Form_Button {
