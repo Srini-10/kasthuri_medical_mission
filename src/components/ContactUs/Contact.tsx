@@ -11,7 +11,7 @@ const Contact = () => {
   return (
     <>
       <div className="Contact_Main mt-[60px] mb-[50px]">
-        <div className="bg-emerald-100">
+        <div className="Contact_Header_Main bg-emerald-100">
           <div className="Contact_Header pl-20 pr-20 w-[1430px] justify-between mx-auto relative flex pt-[25px] pb-[0px]">
             <div className="Contact_Title">
               <h1 className="text-[60px] flex mt-[80px] gap-2 font-bold">

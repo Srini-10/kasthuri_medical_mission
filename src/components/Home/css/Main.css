@@ -12,8 +12,8 @@
   }
   .Bg_Main {
     min-width: 230%;
-    margin-left: -220px;
     min-height: 620px;
+    margin-left: -200px;
   }
 
   .Main_Name {
@@ -23,21 +23,22 @@
     font-weight: bolder;
     line-height: 40px;
     margin-top: 20px;
-    margin-left: -100px; /* Adjusted margin for better alignment */
+    margin-left: 0px;
   }
 
   .Sub_Name {
-    min-width: 65%;
-    max-width: 65%;
-    margin-left: -100px; /* Adjusted margin for better alignment */
+    min-width: 60%;
+    max-width: 60%;
+    margin-left: 0px;
     font-size: 12px;
   }
 
   .Get_Started {
-    margin-left: -100px; /* Adjusted margin for better alignment */
+    margin-left: 0px;
   }
   .Main_Over {
     top: 620px;
+    margin-left: 30px;
   }
   .Design_Main {
     margin-top: 350px;
@@ -54,7 +55,7 @@
 
   .Main_Quote {
     font-size: 10px;
-    margin-left: 50px; /* Adjusted margin for better alignment */
+    margin-left: -150px; /* Adjusted margin for better alignment */
     margin-top: -300px;
     bottom: 130px;
   }

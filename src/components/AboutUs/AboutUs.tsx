@@ -10,7 +10,7 @@ const About = () => {
   return (
     <>
       <div className="About_Main max-w-[97%] py-[0px] px-[0] flex justify-center gap-[0px] h-auto mt-[0px]">
-        <div className="flex bg-emerald-50 min-w-[118.5%] gap-[44px] pl-[22%] pr-[50px] pt-[20px] pb-[30px]">
+        <div className="About_Sub_Main flex bg-emerald-50 min-w-[118.5%] gap-[44px] pl-[22%] pr-[50px] pt-[20px] pb-[30px]">
           <div className="About_Img min-w-[400px] justify-center mx-auto bg-white rounded-lg">
             <LazyLoadImage
               src={Logo}

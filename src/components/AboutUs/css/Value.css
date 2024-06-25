@@ -44,12 +44,12 @@
   .Value_Div1 span,
   .Value_Div2 span,
   .Value_Div3 span {
-    width: 103%;
+    width: 102%;
     position: absolute;
   }
   .Value_Div5 span,
   .Value_Div4 span {
-    width: 103%;
+    width: 102%;
     position: absolute;
   }
 }
