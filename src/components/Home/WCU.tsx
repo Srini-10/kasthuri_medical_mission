@@ -24,7 +24,7 @@ function WCU() {
               draggable="false"
             />
           </div>
-          <div className="WCU_Title mt-[0px] ml-[50px]">
+          <div className="WCU_Title mt-[-20px] ml-[50px]">
             <div className="pt-0">
               <p className="Title text-[30px] text-emerald-400 font-bold leading-[70px]">
                 Why choose us?
