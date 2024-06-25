@@ -13,12 +13,7 @@ const AboutUs = () => {
     <>
       <div>
         <div className="flex gap-0 mt-[60px]">
-          <span className="Main_About w-[92%]">
             <About />
-          </span>
-          <span className="Side_About w-[24%] gap-0 ml-[-210px] pl-0 border-gray-100 border-l-1 border-b-1">
-            <Side />
-          </span>
         </div>
         <div>
           {/* <News /> */}

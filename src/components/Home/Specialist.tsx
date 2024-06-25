@@ -10,12 +10,12 @@ const Specialist = () => {
   return (
     <>
       <div className="Specialist_Main flex justify-center items-center h-[480px] bg-emerald-50">
-        <div className="Specialist_Container w-[75%] items-center relative bg-emerald-400 h-[30vh] mb-[-100px] pl-14 py-10 rounded-xl">
-          <h1 className="Specialist_Name text-black font-bold text-[45px]">
-            Major Dr.P.A.Subramanian AMC
+        <div className="Specialist_Container w-[1080px] items-center relative bg-emerald-400 max-h-[30vh] mb-[-100px] pl-14 py-10 rounded-xl">
+          <h1 className="Specialist_Name text-black font-bold text-[42px]">
+            Major Dr.P.A.Subramanian A.M.C.,
           </h1>
           <p className="Specialist_Sub text-gray-700">
-            M.D.ARCGP, (London), Ph.D. (USA)
+            MRCGP (London), Ph.D., (USA)
           </p>
           <Link to="/Specialist">
             <Button className="Specialist_Button mt-6 bg-white rounded-md font-medium">
@@ -23,7 +23,7 @@ const Specialist = () => {
             </Button>
           </Link>
         </div>
-        <div className="Specialist_Img w-[370px] ml-[670px] mt-[-89px] absolute h-[425px] overflow-hidden">
+        <div className="Specialist_Img w-[370px] ml-[670px] mt-[-101px] absolute max-h-[420px] overflow-hidden">
           <LazyLoadImage
             width={380}
             src={Doctor}

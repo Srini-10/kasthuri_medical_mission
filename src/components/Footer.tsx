@@ -6,7 +6,7 @@ import "./css/Footer.css"; // Make sure to import the CSS file
 const Footer = () => {
   return (
     <>
-      <div className="footer-container">
+      <div className="footer-container bottom-0">
         <div className="footer-content">
           <div className="footer-section">
             <h1 className="footer-title">Kasthuri Medical Mission</h1>

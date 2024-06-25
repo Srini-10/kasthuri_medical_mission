@@ -13,7 +13,7 @@ const Side = () => {
         <div>
           <h1 className="font-bold">Service Featured</h1>
           <p className="text-[13px] mt-[5px]">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Your success is our lasting legacy.
           </p>
           <div className="mt-[20px] bg-slate-200 p-2 rounded-md">
             <li className="list-none flex gap-1">
@@ -56,7 +56,7 @@ const Side = () => {
       </div>
       <div className="mt-[45px] p-2 mx-3">
         <h1 className="font-bold">We'll Provide</h1>
-        <div className="mt-[20px] p-2 grid grid-cols-2 rounded-md">
+        <div className="mt-[20px] p-2 grid grid-cols-1 leading-7 rounded-md">
           <li className="list-none flex gap-1">
             <LazyLoadImage
               src={Tick}
@@ -65,7 +65,7 @@ const Side = () => {
               onContextMenu={(e) => e.preventDefault()}
               draggable="false"
             />
-            <p>Courses</p>
+            <p>BMS & CMP</p>
           </li>
           <li className="list-none flex gap-1">
             <LazyLoadImage
@@ -75,7 +75,7 @@ const Side = () => {
               onContextMenu={(e) => e.preventDefault()}
               draggable="false"
             />
-            <p>Courses</p>
+            <p>DM & S</p>
           </li>
           <li className="list-none flex gap-1">
             <LazyLoadImage
@@ -85,37 +85,7 @@ const Side = () => {
               onContextMenu={(e) => e.preventDefault()}
               draggable="false"
             />
-            <p>Courses</p>
-          </li>
-          <li className="list-none flex gap-1">
-            <LazyLoadImage
-              src={Tick}
-              alt=""
-              className="w-[17px] h-auto lazy-load-image"
-              onContextMenu={(e) => e.preventDefault()}
-              draggable="false"
-            />
-            <p>Courses</p>
-          </li>
-          <li className="list-none flex gap-1">
-            <LazyLoadImage
-              src={Tick}
-              alt=""
-              className="w-[17px] h-auto lazy-load-image"
-              onContextMenu={(e) => e.preventDefault()}
-              draggable="false"
-            />
-            <p>Courses</p>
-          </li>
-          <li className="list-none flex gap-1">
-            <LazyLoadImage
-              src={Tick}
-              alt=""
-              className="w-[17px] h-auto lazy-load-image"
-              onContextMenu={(e) => e.preventDefault()}
-              draggable="false"
-            />
-            <p>Courses</p>
+            <p>BGMS</p>
           </li>
         </div>
       </div>

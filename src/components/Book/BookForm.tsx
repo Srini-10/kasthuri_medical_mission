@@ -96,7 +96,7 @@ function BookForm() {
         further assistance. We're here to help!
       </Modal>
 
-      <form onSubmit={handleSubmit} className="Form_Main">
+      <form onSubmit={handleSubmit} className="Form_MainB">
         <h1 className="Form_Title text-[35px] gap-[12px] text-black mt-2 ml-20 flex font-bold">
           Book <p className="text-emerald-400">Appointment</p>
         </h1>

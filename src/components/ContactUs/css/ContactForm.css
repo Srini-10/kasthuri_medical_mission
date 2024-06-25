@@ -1,23 +1,22 @@
 @media (max-width: 640px) {
-  .Form_Main {
-    width: 100%;
-    transform: translateX(8.5%);
+  .Form_MainC {
     justify-items: space-around;
+    padding-left: 60px;
   }
   .Form_Title {
     font-size: 30px;
     margin-left: 0px;
   }
   .Form_Grid {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    max-width: 114%;
-    margin: auto;
   }
   .Form_Grid_Boxes {
     margin-top: -15px;
   }
+  .Grid_Inputs {
+    max-width: 90%;
+    margin-left: 0px;
+  }
   .Form_Button {
     margin-top: 15px;
-    margin-left: -40px;
   }
 }

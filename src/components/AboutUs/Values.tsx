@@ -23,7 +23,7 @@ const Values = () => {
         <div className="Value_Main scale-[90%] mt-[-40px] -py-[50px]">
           <span className="Value_Containers mx-36 grid-cols-3 grid gap-10 mt-3 mb-4">
             <div className="Value_Div1 rounded-xl relative h-[230px] bg-emerald-50 shadow-md mt-36">
-              <span className="absolute bg-emerald-700 w-[370px] text-white text-center align-baseline text-[34px] font-bold mt-[40px] shadow-xl rounded-md -ml-[6px] h-[60px]">
+              <span className="absolute bg-emerald-700 w-[101.7%] text-white text-center align-baseline text-[34px] font-bold mt-[40px] shadow-xl rounded-md -ml-[0.9%] h-[60px]">
                 Compassion
               </span>
               <p className="mt-[115px] text-[15px] p-3">
@@ -32,7 +32,7 @@ const Values = () => {
               </p>
             </div>
             <div className="Value_Div2 rounded-xl relative h-[230px] bg-emerald-50 shadow-md">
-              <span className="absolute bg-emerald-700 w-[370px] text-white text-center align-baseline text-[34px] font-bold mt-[40px] shadow-xl rounded-md -ml-[6px] h-[60px]">
+              <span className="absolute bg-emerald-700 w-[101.7%] text-white text-center align-baseline text-[34px] font-bold mt-[40px] shadow-xl rounded-md -ml-[0.9%] h-[60px]">
                 Excellence
               </span>
               <p className="mt-[115px] text-[15px] p-3">
@@ -41,7 +41,7 @@ const Values = () => {
               </p>
             </div>
             <div className="Value_Div3 rounded-xl relative h-[230px] bg-emerald-50 shadow-md mt-36">
-              <span className="absolute bg-emerald-700 w-[370px] text-white text-center align-baseline text-[34px] font-bold mt-[40px] shadow-xl rounded-md -ml-[6px] h-[60px]">
+              <span className="absolute bg-emerald-700 w-[101.7%] text-white text-center align-baseline text-[34px] font-bold mt-[40px] shadow-xl rounded-md -ml-[0.9%] h-[60px]">
                 Integrity
               </span>
               <p className="mt-[115px] text-[15px] p-3">
@@ -52,7 +52,7 @@ const Values = () => {
           </span>
           <span className="Value_Containers2 mx-36 px-32 grid-cols-2 grid gap-12 mt-5 mb-4">
             <div className="Value_Div4 rounded-xl relative h-[240px] bg-emerald-50 shadow-md">
-              <span className="absolute bg-emerald-700 w-[435px] text-white text-center align-baseline text-[34px] font-bold mt-[40px] shadow-xl rounded-md -ml-[6px] h-[60px]">
+              <span className="absolute bg-emerald-700 w-[101.7%] text-white text-center align-baseline text-[34px] font-bold mt-[40px] shadow-xl rounded-md -ml-[0.9%] h-[60px]">
                 Diversity and Inclusion
               </span>
               <p className="mt-[115px] text-[15px] p-4">
@@ -61,7 +61,7 @@ const Values = () => {
               </p>
             </div>
             <div className="Value_Div5 rounded-xl relative h-[240px] bg-emerald-50 shadow-md">
-              <span className="absolute bg-emerald-700 w-[435px] text-white text-center align-baseline text-[34px] font-bold mt-[40px] shadow-xl rounded-md -ml-[6px] h-[60px]">
+              <span className="absolute bg-emerald-700 w-[101.7%] text-white text-center align-baseline text-[34px] font-bold mt-[40px] shadow-xl rounded-md -ml-[0.9%] h-[60px]">
                 Collaboration
               </span>
               <p className="mt-[115px] text-[15px] p-4">

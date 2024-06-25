@@ -5,13 +5,9 @@
   height: 400px;
   padding: 0px;
 }
-.About_Image {
-  width: 385px;
-  margin-left: 10px;
-}
 
 @media (max-width: 640px) {
-  .Main_About {
+  .About_Main {
     width: 100%;
   }
   .Side_About {

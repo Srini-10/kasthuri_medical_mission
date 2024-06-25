@@ -14,9 +14,9 @@ import "./css/Testimonial.css";
 const Testimonial = () => {
   return (
     <>
-      <div className="Test_Main w-full mt-[-80px]">
+      <div className="Test_Main min-w-[100%] mt-[-80px]">
         <div className="Test_Map relative mt-[120px] h-[650px] bg-emerald-100 w-[100%] left-1/2 transform -translate-x-1/2 flex justify-center items-center">
-          <img className="Test_Map_Img w-[65%]" src={Map} alt="" />
+          <img className="Test_Map_Img w-[930px]" src={Map} alt="" />
           <div className="relative">
             <span className="absolute ml-[-170px] mt-[80px]">
               <img

@@ -96,7 +96,10 @@ function ContactForm() {
         further assistance. We're here to help!
       </Modal>
 
-      <form onSubmit={handleSubmit} className="Form_Main">
+      <form
+        onSubmit={handleSubmit}
+        className="Form_MainC justify-center mx-auto"
+      >
         <div className="Form_Grid grid w-[82%] pt-0 mx-20 mb-2 gap-4 grid-cols-2">
           <TextInput
             label="Name"
@@ -107,6 +110,7 @@ function ContactForm() {
             styles={inputStyles}
             onChange={handleChange}
             required
+            className="Grid_Inputs"
           />
           <TextInput
             label="Father Name"
@@ -117,7 +121,7 @@ function ContactForm() {
             styles={inputStyles}
             onChange={handleChange}
             required
-            className="Form_Grid_Boxes"
+            className="Form_Grid_Boxes Grid_Inputs"
           />
         </div>
         <div className="Form_Grid grid w-[82%] pt-2 mx-20 mb-2 gap-4 grid-cols-2">
@@ -130,6 +134,7 @@ function ContactForm() {
             styles={inputStyles}
             onChange={handleChange}
             required
+            className="Grid_Inputs"
           />
           <TextInput
             label="Email"
@@ -140,7 +145,7 @@ function ContactForm() {
             styles={inputStyles}
             onChange={handleChange}
             required
-            className="Form_Grid_Boxes"
+            className="Form_Grid_Boxes Grid_Inputs"
           />
         </div>
         <div className="Form_Grid grid w-[82%] mx-20 mb-2 gap-4 grid-cols-2">
@@ -153,6 +158,7 @@ function ContactForm() {
             styles={inputStyles}
             onChange={handleChange}
             required
+            className="Grid_Inputs"
           />
           <Select
             label="Gender"
@@ -167,7 +173,7 @@ function ContactForm() {
             styles={inputStyles}
             onChange={(value) => handleGenderChange(value)}
             required
-            className="Form_Grid_Boxes"
+            className="Form_Grid_Boxes Grid_Inputs"
           />
         </div>
         <div className="Form_Grid grid w-[82%] mx-20 mb-2 gap-4 grid-cols-2">
@@ -181,6 +187,7 @@ function ContactForm() {
               setFormData((prevData) => ({ ...prevData, Dob: value }))
             }
             required
+            className="Grid_Inputs"
           />
           <TextInput
             label="Address"
@@ -191,7 +198,7 @@ function ContactForm() {
             styles={inputStyles}
             onChange={handleChange}
             required
-            className="Form_Grid_Boxes"
+            className="Form_Grid_Boxes Grid_Inputs"
           />
         </div>
         <Button

@@ -2,7 +2,7 @@
   .About_Main {
     padding-left: 15px;
     padding-right: 15px;
-    height: 820px;
+    height: 860px;
   }
 
   .About_Main_Title {
@@ -67,7 +67,7 @@
 @media (min-width: 641px) {
   .About_Main {
     padding-left: 125px;
-    padding-right: 32px;
+    padding-right: 250px;
     height: 500px;
   }
 

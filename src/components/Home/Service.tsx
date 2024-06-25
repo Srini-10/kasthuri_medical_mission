@@ -3,6 +3,7 @@ import { Button } from "@nextui-org/react";
 import Icon1 from "../../assets/Medicine-Chest.svg";
 import Icon2 from "../../assets/Microscope.svg";
 import Icon3 from "../../assets/Stethoscope.svg";
+import Icon4 from "../../assets/Clinic-Building.svg";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { Link } from "react-router-dom";
@@ -77,14 +78,38 @@ function Service() {
                 onContextMenu={(e) => e.preventDefault()}
                 draggable="false"
               />
-              <h1 className="PT_Service mt-3 ml-5">
-                Clinical Skills Training
-              </h1>
+              <h1 className="PT_Service mt-3 ml-5">Clinical Skills Training</h1>
             </span>
             <p className="text-[15px] w-[100%] mt-3 font-normal text-gray-700">
               Gain hands-on experience with our clinical skills training
               sessions. Learn essential techniques and procedures in a simulated
               environment to build confidence and proficiency.
+            </p>
+            <Link to="/Courses">
+              <Button className="bg-transparency text-[16px] font-medium border-2 border-emerald-400 rounded-md mt-4 pt-2 pb-2 pl-5 pr-5">
+                Learn More
+              </Button>
+            </Link>
+          </div>
+          <div className="Containers mt-3 hover:bg-emerald-50 pl-4 pt-3 pb-3 pr-2 rounded-lg">
+            <span className="flex">
+              <LazyLoadImage
+                src={Icon4}
+                alt=""
+                className="w-[60px] h-[60px] rounded-xl"
+                effect="blur"
+                onContextMenu={(e) => e.preventDefault()}
+                draggable="false"
+              />
+              <h1 className="PT_Service mt-3 ml-5">
+                Best Curriculum and Facilities
+              </h1>
+            </span>
+            <p className="text-[15px] w-[100%] mt-3 font-normal text-gray-700">
+              Our curriculum integrates academic learning with hands-on clinical
+              practice, supported by state-of-the-art labs and simulated patient
+              environments. Continuously updated, our programs ensure students
+              learn the latest medical advancements.
             </p>
             <Link to="/Courses">
               <Button className="bg-transparency text-[16px] font-medium border-2 border-emerald-400 rounded-md mt-4 pt-2 pb-2 pl-5 pr-5">

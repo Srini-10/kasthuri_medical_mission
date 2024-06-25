@@ -1,8 +1,8 @@
 @media (max-width: 640px) {
-  .Form_Main {
-    min-width: 100%;
+  .Form_MainB {
+    min-width: 110%;
     height: 855px;
-    margin-left: 12px;
+    margin-left: 25px;
     margin-top: -10px;
   }
   .Form_Title {
