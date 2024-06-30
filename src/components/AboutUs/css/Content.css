@@ -6,3 +6,11 @@
     margin-top: 40px;
   }
 }
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .Content_Main {
+    font-size: 14px;
+    padding: 25px 40px;
+  }
+}

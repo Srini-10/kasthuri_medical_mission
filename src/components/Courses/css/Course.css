@@ -32,10 +32,14 @@
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
-  width: 100%;
+  max-width: 900px;
+  min-width: 900px;
   max-height: 80vh;
   overflow-y: auto;
+}
+
+.Popup_Grid_Points {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .popup-header {
@@ -77,11 +81,16 @@
   color: #333333;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 @media (max-width: 640px) {
-  .Course_Main {
+  /* .Course_Main {
     width: 100%;
-    min-height: 1400px;
-  }
+    min-height: 1230px;
+  } */
+
   .Course_Contents {
     width: 85%;
     margin-left: 40px;
@@ -110,12 +119,181 @@
     margin-top: 0px;
   }
   .popup-content {
-    width: 95%;
+    max-width: 350px;
+    min-width: 350px;
+    max-height: 70%;
+  }
+  .Popup_Grid_Points {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .Popup_Grid_Ul {
+    margin-top: 4px;
+  }
+  .popup-body p {
+    font-size: 15px;
+  }
+  .popup-body li {
+    font-size: 12px;
+  }
+  .popup-close {
+    margin-left: 73%;
+  }
+  .popup_footer2_Button {
+    margin-top: -40px;
+  }
+  .popup-title {
+    font-size: 19px;
+    text-align: center;
+    margin: auto;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 767px) {
+  .Course_Main {
+    min-height: 570px;
+  }
+  .Popup_Grid_Points {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .Popup_Grid_Ul {
+    margin-top: 4px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* .Course_Main {
+    width: 100%;
+    min-height: 1280px;
+  } */
+
+  .Course_Contents {
+    width: 85%;
+    margin-left: 40px;
+  }
+  .Course_Title {
+    width: 100%;
+    font-size: 35px;
+    margin-top: 20px;
+    margin-left: 0px;
+    flex-wrap: wrap;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+  .Course_Sub {
+    width: 90%;
+    font-size: 13px;
+  }
+  .Course_Containers {
+    width: 100%;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .Popup_Grid_Ul {
+    margin-top: 4px;
+  }
+  .Card {
+    width: 100%;
+  }
+  .Course_Footer {
+    margin-top: 0px;
+  }
+  .popup-content {
+    max-width: 600px;
+    min-width: 600px;
+    min-height: 700px;
+    max-height: 700px;
+  }
+  .Popup_Grid_Points {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
   .popup-body p {
     font-size: 15px;
   }
   .popup-close {
-    margin-left: 78%;
+    margin-left: 81%;
+    margin-top: -4%;
+  }
+  .popup-footer2 {
+    margin-top: 0px;
+  }
+  .popup_footer2_Button {
+    margin-top: 20px;
+  }
+}
+
+/* If Curriculum Popup not longer Needed */
+/* .Optional_Curriculum_Button {
+  display: none;
+} */
+
+/* If the Course Curriculum is True */
+/* .Optional_Course_Main {
+  height: 68vh;
+}
+.Optional_Card {
+  height: 350px;
+}
+.Optional_Button {
+  display: none;
+} */
+
+/* If the Course Curriculum is False */
+.Optional_Course_Main {
+  height: 75vh;
+  /* height: 590px; */
+}
+.Optional_Card {
+  height: 412px;
+}
+.Optional_Button {
+  display: block;
+}
+
+@media (max-width: 640px) {
+  /* If the Course Curriculum is True */
+  /* .Optional_Course_Main {
+    min-height: 1230px;
+  }
+  .Optional_Card {
+    height: 350px;
+  }
+  .Optional_Button {
+    display: none;
+  } */
+  /* If the Course Curriculum is False */
+  .Optional_Course_Main {
+    min-height: 1370px;
+  }
+  .Optional_Card {
+    height: 400px;
+  }
+  .Optional_Button {
+    display: block;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* .Course_Main {
+    width: 100%;
+    min-height: 1280px;
+  } */
+
+  /* If the Course Curriculum is True */
+  /* .Optional_Course_Main {
+    min-height: 1180px;
+  }
+  .Optional_Card {
+    height: 350px;
+  }
+  .Optional_Button {
+    display: none;
+  } */
+  /* If the Course Curriculum is False */
+  .Optional_Course_Main {
+    min-height: 1250px;
+  }
+  .Optional_Card {
+    height: 380px;
+  }
+  .Optional_Button {
+    display: block;
   }
 }

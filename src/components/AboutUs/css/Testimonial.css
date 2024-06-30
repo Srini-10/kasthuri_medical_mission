@@ -57,3 +57,47 @@
     scale: 0.8;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .Test_Main,
+  .Test_Map,
+  .Test_Base {
+    height: 500px;
+  }
+  .Test_Base_Container {
+    margin-top: 150px;
+  }
+  .Test_Base {
+    margin-bottom: 0px;
+  }
+  .Test_Base2 {
+    padding-top: 15px;
+  }
+  .Test_Title {
+    font-size: 15px;
+  }
+  .Test_Sub {
+    font-size: 26px;
+  }
+  .Text_Carousel {
+    margin-top: 5px;
+  }
+  .Test_Map_Points {
+    scale: 0.64;
+  }
+  .Test_Map_Img {
+    width: 600px;
+  }
+  .Carousel_Contents h1 {
+    font-size: 17px;
+    width: 70%;
+  }
+  .Carousel_Prev {
+    margin-left: 25px;
+    scale: 0.8;
+  }
+  .Carousel_Next {
+    margin-right: 25px;
+    scale: 0.8;
+  }
+}

@@ -10,7 +10,7 @@ const Values = () => {
       <div className="Value">
         <LazyLoadImage
           src={Design}
-          className="Design_Image w-72 opacity-50 absolute ml-[77%] mt-[-60px] lazy-load-image"
+          className="Design_Image w-[230px] opacity-50 absolute ml-[76%] mt-[0px] lazy-load-image"
           alt=""
           effect="opacity"
           onContextMenu={(e) => e.preventDefault()}
@@ -65,8 +65,8 @@ const Values = () => {
                 Collaboration
               </span>
               <p className="mt-[115px] text-[15px] p-4">
-                We foster teamwork and cooperation among students, faculty, and
-                healthcare professionals to achieve shared goals.
+                We foster teamwork among students, faculty, and healthcare
+                professionals to achieve shared goals.
               </p>
             </div>
           </span>

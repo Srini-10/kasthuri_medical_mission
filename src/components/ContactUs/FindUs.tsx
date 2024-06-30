@@ -5,6 +5,7 @@ import Phone from "../../assets/Phone.svg";
 import Mail from "../../assets/Mail.svg";
 import Location from "../../assets/Location.svg";
 import "./css/FindUs.css";
+import { Link } from "react-router-dom";
 
 const FindUs = () => {
   return (
@@ -14,45 +15,54 @@ const FindUs = () => {
           Find Us <p className="text-emerald-400">Here</p>
         </h1>
         <div className="FindUs_Main_Grid grid w-[100%] grid-cols-3 mt-[30px] gap-3">
-          <div className="FindUs_Grid bg-emerald-100 p-2 flex gap-2 rounded-lg w-[100%] h-[60px]">
-            <LazyLoadImage
-              src={Phone}
-              alt="Phone Icon"
-              className="lazy-load-image"
-              effect="blur"
-              width="45px"
-            />
-            <span className="FindUs_Numbers mt-[2px]">
-              <h1 className="font-bold">Phone:</h1>
-              <p className="text-[14px]">+91 6383134299</p>
-            </span>
-          </div>
-          <div className="FindUs_Grid bg-emerald-100 p-2 flex gap-2 rounded-lg w-[100%] h-[60px]">
-            <LazyLoadImage
-              src={Mail}
-              alt="Mail Icon"
-              className="lazy-load-image"
-              effect="blur"
-              width="45px"
-            />
-            <span className="FindUs_Numbers mt-[2px]">
-              <h1 className="font-bold">Email:</h1>
-              <p className="text-[14px]">abcd1234@gmail.com</p>
-            </span>
-          </div>
-          <div className="FindUs_Grid bg-emerald-100 p-2 flex gap-2 rounded-lg w-[100%] h-[60px]">
-            <LazyLoadImage
-              src={Location}
-              alt="Location Icon"
-              className="lazy-load-image"
-              effect="blur"
-              width="45px"
-            />
-            <span className="FindUs_Numbers mt-[2px]">
-              <h1 className="font-bold">Location:</h1>
-              <p className="text-[14px]">Salem, Tamil Nadu</p>
-            </span>
-          </div>
+          <Link to="tel:6383134299">
+            <div className="FindUs_Grid FindUs_Grid1 bg-emerald-100 p-2 flex gap-2 rounded-lg w-[100%] h-[60px]">
+              <LazyLoadImage
+                src={Phone}
+                alt="Phone Icon"
+                className="lazy-load-image"
+                effect="blur"
+                width="45px"
+              />
+              <span className="FindUs_Numbers mt-[2px]">
+                <h1 className="font-bold">Phone:</h1>
+                <p className="text-[14px]">+91 0123456789</p>
+              </span>
+            </div>
+          </Link>
+          <Link target="_blank" to="mailto:kasthurimedicalmission@gmail.com">
+            <div className="FindUs_Grid FindUs_Grid2 bg-emerald-100 p-2 flex gap-2 rounded-lg w-[100%] h-[60px]">
+              <LazyLoadImage
+                src={Mail}
+                alt="Mail Icon"
+                className="lazy-load-image"
+                effect="blur"
+                width="45px"
+              />
+              <span className="FindUs_Numbers mt-[2px]">
+                <h1 className="font-bold">Email:</h1>
+                <p className="text-[14px]">kasthurimedicalmission@gmail.com</p>
+              </span>
+            </div>
+          </Link>
+          <Link
+            target="_blank"
+            to="https://www.google.com/maps/place/Major+Dr.+P.+A.+Subramanian+residency/@11.701263,78.174427,18z/data=!4m6!3m5!1s0x3babf1007e26ff5b:0x8cb781e48048bfce!8m2!3d11.7012632!4d78.1744271!16s%2Fg%2F11y48nlwdx?hl=en&entry=ttu"
+          >
+            <div className="FindUs_Grid FindUs_Grid3 bg-emerald-100 p-2 flex gap-2 rounded-lg w-[100%] h-[60px]">
+              <LazyLoadImage
+                src={Location}
+                alt="Location Icon"
+                className="lazy-load-image"
+                effect="blur"
+                width="45px"
+              />
+              <span className="FindUs_Numbers mt-[2px]">
+                <h1 className="font-bold">Location:</h1>
+                <p className="text-[14px]">Salem, Tamil Nadu</p>
+              </span>
+            </div>
+          </Link>
         </div>
         <div className="FindUs_Map mt-4">
           <iframe

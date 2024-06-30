@@ -8,6 +8,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Tab Bar Customization */
+.tab-label {
+  background-color: #34d399 !important;
+}
+.tab-label[title*="Kasthuri Medical Mission"] {
+  background-color: #34d399 !important;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

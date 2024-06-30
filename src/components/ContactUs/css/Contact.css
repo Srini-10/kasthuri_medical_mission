@@ -1,19 +1,19 @@
 @media (max-width: 640px) {
   .Contact_Main {
     width: 100%;
-    height: 1400px;
-    padding-left: 30px;
+    max-height: 480px;
+    padding-left: 0px;
     margin-right: 0px;
   }
   .Contact_Header_Main {
-    min-width: 111.7%;
+    min-width: 100%;
   }
   .Contact_Header {
     flex-wrap: wrap;
     width: 100%;
     padding: 0px;
     margin-left: 35px;
-    margin-top: 80px;
+    margin-top: -50px;
   }
   .Contact_Design {
     margin-top: 50px;
@@ -30,10 +30,11 @@
     font-size: 45px;
   }
   .Contact_Title p {
-    width: 90%;
+    width: 100%;
+    font-size: 11px;
   }
   .Contact_Design_Cont1 {
-    margin-left: -1%;
+    margin-left: 2%;
     margin-top: -400px;
     padding: 0px;
     scale: 0.75;
@@ -61,11 +62,108 @@
 
   /* Form */
   .Contact_Form {
-    width: 90%;
-    height: 810px;
-    padding-left: 0px;
+    display: none;
+  }
+  .Contact_Form2 {
+    display: block;
+    margin: auto;
+    padding: auto;
+    max-width: 92%;
+    min-width: 92%;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .Contact_Form {
     margin-top: -40px;
-    left: 0px;
-    transform: translateX(5.5%);
+  }
+
+  .Contact_Design_Cont1 {
+    padding: 0px;
+    margin-left: -100px;
+    margin-top: -270px;
+    scale: 1;
+    width: 150px;
+    height: 80px;
+  }
+  .Contact_Form {
+    width: 90%;
+  }
+  .Contact_Design {
+    width: 450px;
+  }
+  .Contact_Design_Img {
+    min-width: 300px;
+    height: 300px;
+    padding-left: -100px;
+    scale: 1;
+  }
+  .Contact_Design_Cont1_Cont {
+    margin-left: 15px;
+  }
+  .Contact_Design_Cont2_Cont {
+    margin-left: -10px;
+  }
+  .Contact_Design_Cont1_Img {
+    min-width: 25px;
+    min-height: 25px;
+    max-width: 25px;
+    max-height: 25px;
+    position: absolute;
+  }
+  .Contact_Design_Cont1_Image {
+    margin-top: -7px;
+    max-height: 80px;
+  }
+  .Contact_Design_Cont1_Image,
+  .Contact_Design_Cont2_Image {
+    gap: 0px;
+    padding: 0px;
+  }
+  .Contact_Design_Cont2_Div {
+    padding: 0px;
+    padding-top: 2.5px;
+    width: 42px;
+    height: 40px;
+    margin-right: 20px;
+  }
+  .Contact_Design_Cont2_Img {
+    margin-left: -13px;
+  }
+  .Contact_Design_Cont1 h1 {
+    font-size: 9px;
+  }
+  .Contact_Design_Cont1 p {
+    font-size: 8px;
+  }
+  .Contact_Design_Cont2 {
+    margin-left: 170px;
+    margin-top: -120px;
+    scale: 0.7;
+  }
+  .Contact_Design_Cont1_Span {
+    width: 100px;
+    height: 17px;
+    margin-top: -15px;
+    margin-left: -10px;
+  }
+  .Contact_Design_Cont1_Span p {
+    margin-top: 2px;
+    font-size: 8px;
+  }
+  .Contact_Title {
+    width: 90%;
+    padding-left: 30px;
+  }
+  .Contact_Title h1 {
+    font-size: 40px;
+  }
+  .Contact_Title p {
+    width: 78%;
+    font-size: 12px;
+  }
+  .Contact_Design img {
+    margin-left: 0%;
   }
 }

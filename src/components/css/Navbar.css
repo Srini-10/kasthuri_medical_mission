@@ -12,14 +12,18 @@
   width: 100%;
   justify-content: space-between;
 }
-.navbar-appointment {
-  display: flex;
+.Navbar {
+  max-width: 100%;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .navbar {
     width: 100%;
     height: 60px;
+  }
+
+  .QuoteNav {
+    margin-top: 40vh;
   }
 
   .navbar-toggle,
@@ -34,6 +38,9 @@
     display: none;
   }
 
+  .Menu_Items_Quote {
+    margin-top: 80%;
+  }
   .navbar-appointment {
     display: none;
   }
@@ -49,14 +56,25 @@
   .navbar-center,
   .navbar-book {
     display: flex;
+    margin: auto 4%;
   }
   .navbar-center {
-    margin-left: 14%;
+    margin-left: 18.8%;
   }
-  .navbar-content {
+  .Menu_Links {
+    padding-left: 6.5%;
+  }
+  .navbar-content,
+  .navbar-center {
+    display: none;
+  }
+  .navbar-center2 {
     display: block;
+    padding-top: 20px;
   }
-
+  .Menu_Items_Quote {
+    margin-top: 40%;
+  }
   .navbar-appointment {
     display: none;
   }

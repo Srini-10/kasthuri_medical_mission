@@ -1,7 +1,9 @@
 @media (max-width: 640px) {
   .Works_Main {
-    height: 750px;
+    max-width: 100%;
+    min-height: 700px;
     position: relative;
+    scale: 0.9;
   }
   .Works_Title {
     font-size: 40px;
@@ -18,15 +20,101 @@
     margin-left: -50px;
     text-align: left;
   }
-  .Container_Works {
+  .Container_Works1 {
+    margin-top: 150px;
+    position: relative;
     width: 90%;
     margin-left: 50px;
     flex-wrap: wrap;
   }
-  .Container_Design {
+  .Container_Designs {
     display: none;
   }
   .Works_SA {
     text-wrap: nowrap;
   }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .Works_Main {
+    max-height: 220px;
+    position: relative;
+    max-width: 100%;
+  }
+  .Works_Heading {
+    text-align: center;
+    width: 600px;
+  }
+  .Container_Works2 {
+    max-width: 650px;
+    padding-left: auto;
+    padding-right: auto;
+    margin-left: auto;
+    gap: 0px;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .Container_Works1 {
+    max-width: 400px;
+    margin-top: 30px;
+    padding-left: auto;
+    padding-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 0px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .Container_Works_Ttl {
+    font-size: 21px;
+  }
+  .Container_Works_Des {
+    width: 230px;
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .Book {
+    font-size: 18px;
+  }
+  .Container_Designs {
+    margin-top: 18px;
+    max-width: 350px;
+    margin-left: -10px;
+    justify-content: center;
+  }
+  .Design2,
+  .Design1 {
+    max-width: 200px;
+  }
+}
+
+.Works_Main {
+  height: 580px;
+  position: relative;
+  max-width: 100%;
+}
+.Container_Works2 {
+  max-width: 700px;
+  padding-left: auto;
+  padding-right: auto;
+  margin-left: auto;
+  gap: 95px;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -195px;
+  position: relative;
+}
+.Container_Works1 {
+  max-width: 1250px;
+  padding-left: auto;
+  padding-right: auto;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }

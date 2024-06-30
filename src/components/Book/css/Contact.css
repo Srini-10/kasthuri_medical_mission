@@ -1,28 +1,59 @@
 @media (max-width: 640px) {
-  .Contact_Main {
+  .Contact_Main2 {
     margin-top: -80px;
     margin-bottom: 50px;
     width: 100%;
     height: 300px;
     margin-left: -45px;
   }
-  .Contact_Title {
+  .Contact_Title2 {
     font-size: 34px;
+    margin-left: 17px;
   }
   .Contact_Contents {
     margin-top: -20px;
-    margin-left: 10px;
+    margin-left: 15px;
   }
   .Contact_Text {
     margin-top: 60px;
   }
   .Contact_Img {
-    width: 230px;
+    width: 190px;
   }
   .Contact_Sub {
     font-size: 17px;
   }
   .Contact_P {
-    font-size: 13px;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .Contact_Main2 {
+    margin-bottom: 0px;
+    width: 100%;
+    margin-left: 10%;
+    padding: auto;
+  }
+  .Contact_Title2 {
+    font-size: 35px;
+    margin-left: 0px;
+  }
+  .Contact_Title2 p {
+    font-size: 35px;
+    margin-left: 0px;
+  }
+  .Contact_Img {
+    min-width: 350px;
+    max-width: 350px;
+    margin-left: -30px;
+  }
+  .Contact_Text h1 {
+    margin-left: 0px;
+    font-size: 25px;
+  }
+  .Contact_Text p {
+    font-size: 17px;
+    margin-left: 0px;
   }
 }

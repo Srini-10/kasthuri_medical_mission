@@ -13,7 +13,7 @@ function WCU() {
   return (
     <>
       <div className="WCU_Main bg-emerald-50 flex flex-auto text-[30px] font-bold pl-0 pt-10 h-[460px]">
-        <div className="w-[1180px] mx-auto flex">
+        <div className="WCU w-[1180px] mx-auto flex">
           <div className="bg-white rounded-lg mt-[-10px] h-[400px]">
             <LazyLoadImage
               src={Icon}

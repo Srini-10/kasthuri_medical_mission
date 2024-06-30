@@ -46,65 +46,98 @@ export default function Nav() {
         </Link>
       </NavbarContent>
 
+      <NavbarContent className="navbar-center2 hidden">
+        <Link href="/" className="text-black">
+          <NavbarBrand>
+            <LazyLoadImage
+              effect="blur"
+              src={Logo}
+              alt=""
+              className="min-w-[45px] max-w-[45px] select-none mt-[-10px] h-auto mr-2"
+              onContextMenu={(e) => e.preventDefault()}
+              draggable="false"
+            />
+            <p className="font-bold mt-[-7px] ml-0 text-inherit">
+              Kasthuri Medical Mission
+            </p>
+          </NavbarBrand>
+        </Link>
+      </NavbarContent>
+
       <NavbarContent className="navbar-content">
-        <NavbarBrand>
+        <NavbarBrand className="ml-[-75px]">
           <LazyLoadImage
             effect="blur"
             src={Logo}
             alt=""
-            className="w-[45px] select-none h-auto mr-2"
+            className="min-w-[40px] select-none h-auto mr-2"
             onContextMenu={(e) => e.preventDefault()}
             draggable="false"
           />
-          <p className="font-bold cursor-default text-inherit">
+          <p className="font-bold cursor-default ml-1 text-inherit">
             Kasthuri Medical Mission
           </p>
         </NavbarBrand>
-        <NavbarItem>
-          <Link
-            color="foreground"
-            href="/"
-            className={`${
-              pathname === "/" ? "text-emerald-400 font-semibold" : ""
-            }`}
-          >
-            Home
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            color="foreground"
-            href="/About_Us"
-            className={`${
-              pathname === "/About_Us" ? "text-emerald-400 font-semibold" : ""
-            }`}
-          >
-            About Us
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            href="/Courses"
-            aria-current="page"
-            color="foreground"
-            className={`${
-              pathname === "/Courses" ? "text-emerald-400 font-semibold" : ""
-            }`}
-          >
-            Our Courses
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            color="foreground"
-            href="/Contact_Us"
-            className={`${
-              pathname === "/Contact_Us" ? "text-emerald-400 font-semibold" : ""
-            }`}
-          >
-            Contact Us
-          </Link>
-        </NavbarItem>
+        <div className="flex gap-[22px] justify-center mx-[100px]">
+          <NavbarItem>
+            <Link
+              color="foreground"
+              href="/"
+              className={`${
+                pathname === "/" ? "text-emerald-400 font-semibold" : ""
+              }`}
+            >
+              Home
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link
+              color="foreground"
+              href="/About_Us"
+              className={`${
+                pathname === "/About_Us" ? "text-emerald-400 font-semibold" : ""
+              }`}
+            >
+              About Us
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link
+              href="/Courses"
+              aria-current="page"
+              color="foreground"
+              className={`${
+                pathname === "/Courses" ? "text-emerald-400 font-semibold" : ""
+              }`}
+            >
+              Our Courses
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link
+              color="foreground"
+              href="/Contact_Us"
+              className={`${
+                pathname === "/Contact_Us"
+                  ? "text-emerald-400 font-semibold"
+                  : ""
+              }`}
+            >
+              Contact Us
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link
+              color="foreground"
+              href="/Founder"
+              className={`${
+                pathname === "/Founder" ? "text-emerald-400 font-semibold" : ""
+              }`}
+            >
+              Our Founder
+            </Link>
+          </NavbarItem>
+        </div>
 
         <NavbarContent justify="end" className="navbar-appointment">
           <NavbarItem>
@@ -153,7 +186,7 @@ export default function Nav() {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu className="pt-[30px] h-full pl-[30px] mt-[-5px]">
+      <NavbarMenu className="Menu_Items pt-[30px] max-h-[100vh] pl-[30px] mt-[-5px]">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item.name}-${index}`}>
             <Link
@@ -171,7 +204,7 @@ export default function Nav() {
             </Link>
           </NavbarMenuItem>
         ))}
-        <p className="text-[11px] text-center mt-[115%]">
+        <p className="Menu_Items_Quote text-[11px] text-gray-500 font-medium text-center bottom-10">
           *To cure sometimes, to relieve often, to comfort always.
         </p>
       </NavbarMenu>

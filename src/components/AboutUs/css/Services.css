@@ -23,3 +23,51 @@
     width: 90%;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .Services_Main {
+    width: 100%;
+    height: 760px;
+  }
+  .Services_Title {
+    font-size: 25px;
+    min-width: 100%;
+    justify-content: left;
+    text-align: left;
+    margin-left: -10px;
+    margin-bottom: -15px;
+  }
+  .Services_Sub {
+    font-size: 12px;
+    margin-top: -15px;
+    text-align: left;
+    padding: 0px 0px;
+    margin-left: -10px;
+    margin-right: 0px;
+    max-width: 100%;
+  }
+  .Services_Points {
+    flex-wrap: wrap;
+    margin-left: 0px;
+    max-width: 90%;
+    margin-top: 60px;
+  }
+  .Services_Title {
+    font-size: 25px;
+    line-height: 32px;
+    width: 90%;
+  }
+  .Services_Sub {
+    font-size: 12px;
+    margin-top: 20px;
+    text-align: left;
+    padding: 0px 0px;
+    margin-left: -10px;
+    margin-right: 0px;
+    width: 110%;
+  }
+  .Services_Points span {
+    width: 90%;
+    margin-top: -17px;
+  }
+}

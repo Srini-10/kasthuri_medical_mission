@@ -1,22 +1,56 @@
 @media (max-width: 640px) {
   .Form_MainC {
-    justify-items: space-around;
-    padding-left: 60px;
+    position: relative;
+    max-width: 100%;
+    min-width: 100%;
+    margin-left: 0px;
+    padding-left: 17%;
+    padding-right: 7%;
+    padding-top: 7%;
+    padding-bottom: 13%;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    background: #ffffff;
+    justify-content: center;
+    margin: auto;
+    margin-top: -35px;
   }
-  .Form_Title {
+  .Grid_Inputs {
+    max-width: 100%;
+    min-width: 100%;
+    position: relative;
+  }
+  .Form_Grid {
+    line-height: 0px;
+  }
+  .Form_Grid_Boxes {
+    margin-top: -20px;
+  }
+  .Form_Grid_Boxes_FN {
+    margin-bottom: -10px;
+  }
+  /* .Form_Title {
     font-size: 30px;
     margin-left: 0px;
   }
-  .Form_Grid {
-  }
   .Form_Grid_Boxes {
-    margin-top: -15px;
+    justify-content: center;
   }
   .Grid_Inputs {
-    max-width: 90%;
-    margin-left: 0px;
+    position: relative;
+    justify-content: center;
+    margin: auto;
+    max-width: 85%;
+    background: #ff0000;
+    min-width: 85%;
+    margin-left: 30%;
+  }
+  .DateInput {
+    margin-left: -11px;
+    min-width: 100%;
   }
   .Form_Button {
     margin-top: 15px;
-  }
+    margin-left: 21px;
+  } */
 }

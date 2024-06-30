@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+@media (max-width: 640px) {
+  .About_Me {
+    max-height: 780px;
+  }
+  .SD_MainAS {
+    max-height: 760px;
+    max-width: 100%;
+    padding-left: 18%;
+  }
+  .SD_Contents {
+    margin: auto;
+    margin-top: 30px;
+  }
+  .SD_About {
+    font-size: 30px;
+  }
+  .SD_Name {
+    margin-top: 2px;
+    font-size: 25px;
+  }
+  .SD_Name_AMC {
+    margin-left: -7px;
+  }
+  .SD_Sub {
+    width: 90%;
+    font-size: 13px;
+    text-align: justify;
+  }
+  .SD_Points {
+    padding: auto;
+    margin: auto;
+    margin-top: 15px;
+    justify-content: space-between;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    width: 100%;
+  }
+  .SD_Add {
+    width: 100%;
+    margin-top: 25px;
+  }
+  .Image_Records:hover .Img_Rec {
+    transform: scale(1.05);
+  }
+  .Container_Design {
+    display: none;
+  }
+  .Achievements {
+    display: block;
+  }
+  .Popup_Container {
+    flex-wrap: wrap;
+  }
+  .PopupContainer {
+    width: 95%;
+  }
+  .ClickHereM {
+    display: block;
+  }
+}
+
+.Button {
+  background-color: transparent; /* Ensure the background is transparent */
+  border: none; /* Remove default border */
+  box-shadow: none; /* Remove default shadow */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Define initial state of .Img_Rec */
+.Img_Rec {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1);
+}
+
+/* Apply hover effect directly on .Img_Rec */
+.Image_Records:hover .Img_Rec {
+  transform: scale(1.005);
+}
+
+/* Custom styles to center the modal */
+.ModalContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure modal takes full height of viewport */
+}
+
+.Img_Model_Container {
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+.Img_Model_Container:hover {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+.PopupContainer {
+  min-width: 95%;
+  max-width: 95%;
+}
+.Img_Model_Container2 {
+  margin-top: 0px;
+}
+.ModalContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 450px;
+  min-height: 100vh; /* Ensure modal takes full height of viewport */
+}
+
+.ClickHere {
+  font-family: "Architects Daughter", cursive;
+  font-weight: 600;
+  font-style: normal;
+}
+/* .ClickHere {
+  font-family: "Indie Flower", cursive;
+  font-weight: 600;
+  font-style: normal;
+} */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .About_Me {
+    max-height: 660px;
+  }
+  .SD_MainAS {
+    max-height: 650px;
+    max-width: 100%;
+  }
+  .SD_Contents {
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  .SD_About {
+    font-size: 30px;
+  }
+  .SD_Name {
+    margin-top: 2px;
+    font-size: 35px;
+  }
+  .SD_Name_D {
+    margin-top: -5px;
+  }
+  .SD_Sub {
+    min-width: 100%;
+    font-size: 13px;
+    text-align: justify;
+  }
+  .Breaks {
+    display: none;
+  }
+  .SD_Points {
+    padding: auto;
+    margin: auto;
+    margin-top: 15px;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+  .SD_Add {
+    width: 100%;
+    margin-top: 25px;
+  }
+  .Image_Records:hover .Img_Rec {
+    transform: scale(1.05);
+  }
+  .Popup1_Founder {
+    display: none;
+  }
+  .Popup2_Founder {
+    display: block;
+  }
+  .Container_Design {
+    display: none;
+  }
+  .Achievements {
+    display: block;
+  }
+  .ModalContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 450px;
+    min-height: 100vh; /* Ensure modal takes full height of viewport */
+  }
+  .PopupContainer {
+    min-width: 95%;
+    max-width: 95%;
+  }
+  .ClickHereM {
+    display: block;
+    margin-top: -67px;
+    margin-left: 62%;
+    padding-left: 0px;
+    width: 100px;
+    height: 100px;
+  }
+  .ClickHere_Hand {
+    margin-left: -100px;
+    margin-top: -25px;
+  }
+  .ClickHere {
+    margin-top: -40px;
+    margin-left: 10px;
+  }
+  .Specialist_ImgF {
+    display: none;
+  }
+}

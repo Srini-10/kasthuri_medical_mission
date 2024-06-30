@@ -31,7 +31,6 @@
     margin-top: 0px;
   }
 
-
   .Value_Div1 span,
   .Value_Div2 span,
   .Value_Div3 span,
@@ -51,5 +50,90 @@
   .Value_Div4 span {
     width: 102%;
     position: absolute;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .Value {
+    height: 660px;
+    width: 100%;
+    padding: auto;
+    margin: auto;
+  }
+  .Design_Image {
+    display: none;
+  }
+  .Value_Title {
+    font-size: 45px;
+    margin-left: 30px;
+    margin-top: 0px;
+  }
+  .Value_Main {
+    max-width: 800px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: auto;
+    margin-top: -40px;
+    height: 750px;
+    scale: 1;
+  }
+  .Value_Containers,
+  .Value_Containers2 {
+    margin: auto;
+    padding: auto;
+  }
+  .Design_Image {
+    display: block;
+    min-width: 190px;
+    margin-left: 75%;
+    margin-top: -30px;
+  }
+  .Value_Div1 {
+    margin-top: 70px;
+  }
+  .Value_Div2 {
+    margin-top: 0px;
+  }
+  .Value_Div3 {
+    margin-top: 70px;
+  }
+  .Value_Div4 {
+    margin-top: 0px;
+  }
+  .Value_Div5 {
+    margin-top: 0px;
+  }
+
+  .Value_Div1 p,
+  .Value_Div2 p,
+  .Value_Div3 p,
+  .Value_Div5 p,
+  .Value_Div4 p {
+    font-size: 13px;
+    margin-top: 95px;
+    padding: 0px;
+    width: 260px;
+  }
+  .Value_Div1 span,
+  .Value_Div2 span,
+  .Value_Div3 span,
+  .Value_Div5 span,
+  .Value_Div4 span {
+    font-size: 20px;
+    padding-top: 6px;
+    margin-left: -5px;
+    height: 48px;
+    width: 260px;
+    position: absolute;
+  }
+  .Value_Div1,
+  .Value_Div2,
+  .Value_Div3,
+  .Value_Div5,
+  .Value_Div4 {
+    width: 250px;
+    height: 220px;
+    scale: 1;
   }
 }

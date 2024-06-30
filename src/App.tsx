@@ -1,58 +1,61 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import PuffLoader from "react-spinners/PuffLoader";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { Spinner } from "@nextui-org/react";
 
 import Nav from "./components/Navbar.tsx";
 import Home from "./pages/Home.tsx";
 import AboutUs from "./pages/AboutUs.tsx";
 import ContactUs from "./pages/ContactUs.tsx";
 import Course from "./pages/Courses.tsx";
-import Details from "./pages/Details.tsx";
 import Book from "./pages/BookApp.tsx";
+import ErrorPage from "./pages/ErrorPage.tsx";
+import Founders from "./pages/Founders.tsx";
 import "./App.css";
-import Oops from "./assets/Oops.svg";
-import Specialist from "./pages/Specialist.tsx";
-// import other components here
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const location = useLocation();
 
   useEffect(() => {
-    // Simulate an async operation, e.g., data fetching
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       setLoading(false);
-    }, 2000); // Change this to your actual data fetching duration
-  }, []);
+    }, 1000); // Simulate data fetching delay
+
+    // Clean up timeout to prevent memory leaks
+    return () => clearTimeout(timeout);
+  }, [location.pathname]);
 
   return (
-    <BrowserRouter>
-      <div className="App">
+    <div className="App">
+      <div className="App_Main">
+        <Nav />
         {loading ? (
-          <div className="loader-container">
-            <PuffLoader color="#36D7B7" loading={loading} size={150} />
+          <div className="loader-container text-emerald-400">
+            <Spinner id="Spinner" color="default" />
           </div>
         ) : (
-          <>
-            <p className="App_Content hidden">
-              <img src={Oops} alt="" className="w-[150px] mx-auto mb-0" />
-              "This device is not compatible with this website."
-            </p>
-            <div className="App_Main">
-              <Nav />
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/Founder" element={<Specialist />} />
-                <Route path="/About_Us" element={<AboutUs />} />
-                <Route path="/Courses" element={<Course />} />
-                <Route path="/Contact_Us" element={<ContactUs />} />
-                <Route path="/Book_Appointment" element={<Book />} />
-              </Routes>
-            </div>
-          </>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Founder" element={<Founders />} />
+            <Route path="/About_Us" element={<AboutUs />} />
+            <Route path="/Courses" element={<Course />} />
+            <Route path="/Contact_Us" element={<ContactUs />} />
+            <Route path="/Book_Appointment" element={<Book />} />
+            {/* Route for handling unknown paths */}
+            <Route path="*" element={<ErrorPage />} />
+          </Routes>
         )}
       </div>
+    </div>
+  );
+}
+
+function AppWrapper() {
+  return (
+    <BrowserRouter>
+      <App />
     </BrowserRouter>
   );
 }
 
-export default App;
+export default AppWrapper;

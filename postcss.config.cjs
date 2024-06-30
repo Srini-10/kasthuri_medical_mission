@@ -1,3 +1,21 @@
+const { nextui } = require("@nextui-org/react");
+module.exports = {
+  plugins: [
+    nextui({
+      themes: {
+        light: {
+          colors: {
+            success: "#34d399",
+          },
+        },
+        dark: {
+          colors: {},
+        },
+      },
+    }),
+  ],
+};
+
 module.exports = {
   plugins: {
     "postcss-preset-mantine": {},

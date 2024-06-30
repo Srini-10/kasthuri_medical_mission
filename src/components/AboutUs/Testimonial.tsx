@@ -17,7 +17,7 @@ const Testimonial = () => {
       <div className="Test_Main min-w-[100%] mt-[-80px]">
         <div className="Test_Map relative mt-[120px] h-[650px] bg-emerald-100 w-[100%] left-1/2 transform -translate-x-1/2 flex justify-center items-center">
           <img className="Test_Map_Img w-[930px]" src={Map} alt="" />
-          <div className="relative">
+          <div className="Test_Map_Points relative">
             <span className="absolute ml-[-170px] mt-[80px]">
               <img
                 className="w-[35px] h-[35px] p-1 absolute rounded-full"
@@ -84,16 +84,18 @@ const Testimonial = () => {
             </span>
           </div>
         </div>
-        <div className="Test_Base bg-emerald-100 opacity-60 absolute w-[100%] h-[650px] mt-[-650px]"></div>
-        <div className="Test_Base2 text-black text-center absolute pt-[30px] w-[100%] h-[610px] mt-[-620px]">
-          <h1 className="Test_Title text-[17px] w-[80%] mx-auto text-gray-700 font-medium">
-            Testimonials
-          </h1>
-          <h1 className="Test_Sub text-[35px] mt-2 justify-center font-semibold flex gap-2">
-            What People Say <p className="text-emerald-400">About Us</p>
-          </h1>
-          <div className="Text_Carousel absolute w-[100%] text-black h-[420px] mt-[40px] left-1/2 transform -translate-x-1/2 opacity-100">
-            <Scroll />
+        <div className="Test_Base_Container">
+          <div className="Test_Base bg-emerald-100 opacity-60 absolute w-[100%] h-[650px] mt-[-650px]"></div>
+          <div className="Test_Base2 text-black text-center absolute pt-[30px] w-[100%] h-[610px] mt-[-620px]">
+            <h1 className="Test_Title text-[17px] w-[80%] mx-auto text-gray-700 font-medium">
+              Testimonials
+            </h1>
+            <h1 className="Test_Sub text-[35px] mt-2 justify-center font-semibold flex gap-2">
+              What People Say <p className="text-emerald-400">About Us</p>
+            </h1>
+            <div className="Text_Carousel absolute w-[100%] text-black h-[420px] mt-[40px] left-1/2 transform -translate-x-1/2 opacity-100">
+              <Scroll />
+            </div>
           </div>
         </div>
       </div>

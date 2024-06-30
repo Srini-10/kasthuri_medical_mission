@@ -28,6 +28,9 @@ const Footer = () => {
               <li className="footer-list-item">
                 <Link to="/Contact_Us">Contact Us</Link>
               </li>
+              <li className="footer-list-item">
+                <Link to="/Founder">Our Founder</Link>
+              </li>
             </ul>
           </div>
           <div className="footer-appointment">

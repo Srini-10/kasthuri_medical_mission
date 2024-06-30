@@ -1,14 +1,23 @@
 import React, { useState } from "react";
-import { TextInput, Select, Modal } from "@mantine/core";
-import { DateInput } from "@mantine/dates";
-import { Button } from "@nextui-org/react";
+import { TextInput, Select, Modal, Loader } from "@mantine/core";
+import { Button, Spinner } from "@nextui-org/react";
 import axios from "axios";
 import "@mantine/core/styles.css";
-import "@mantine/dates/styles.css";
 import "./css/ContactForm.css";
 
+import { DatePicker, DatePickerProps, Typography } from "antd";
+import { Space } from "antd/es";
+import dayjs from "dayjs";
+import customParseFormat from "dayjs/plugin/customParseFormat";
+
 function ContactForm() {
+  dayjs.extend(customParseFormat);
+  const dateFormat = "DD/MM/YYYY";
+  const customFormat: DatePickerProps["format"] = (value) =>
+    `${value.format(dateFormat)}`;
+
   const [slowTransitionOpened, setSlowTransitionOpened] = useState(false);
+  const [errorModalOpened, setErrorModalOpened] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     Name: "",
@@ -17,9 +26,10 @@ function ContactForm() {
     Email: "",
     Age: "",
     Gender: "",
-    Dob: "",
+    Dob: null,
     Address: "",
   });
+  const [loading, setLoading] = useState(false); // State for loading indicator
 
   const inputStyles = {
     input: {
@@ -48,18 +58,29 @@ function ContactForm() {
     }));
   };
 
+  const handleDateChange = (date, dateString) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      Dob: dateString, // Ant Design's DatePicker provides dateString directly
+    }));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const formEle = document.querySelector(
-      ".Form_Main"
-    ) as HTMLFormElement | null;
+    setLoading(true); // Set loading to true while submitting
+
+    const formEle = document.querySelector(".Form_MainC");
+
     if (formEle) {
-      const formData = new FormData(formEle);
+      const data = new FormData(formEle);
+
+      // Manually append the date as a string to the FormData
+      data.append("Dob", formData.Dob);
 
       axios
         .post(
           "https://script.google.com/macros/s/AKfycbwoTMSPugGD0L6xjMa8LnDFD_aQyFnxpuHdlAcs94X9K2uqOLn74iUro8HUuvbmr1wd/exec",
-          formData
+          data
         )
         .then((response) => {
           console.log("Form submitted successfully:", response);
@@ -71,29 +92,55 @@ function ContactForm() {
             Email: "",
             Age: "",
             Gender: "",
-            Dob: "",
+            Dob: null,
             Address: "",
           });
           formEle.reset();
-          setSlowTransitionOpened(true); // Open modal after successful submission
+          setSlowTransitionOpened(true); // Open success modal after successful submission
+        })
+        .finally(() => {
+          setLoading(false); // Set loading to false after submission completes
         })
         .catch((error) => {
           console.error("Error submitting form:", error);
+          setErrorModalOpened(true); // Open error modal after failed submission
         });
     }
   };
 
   return (
     <div>
+      {!loading && (
+        <Modal
+          opened={slowTransitionOpened}
+          onClose={() => setSlowTransitionOpened(false)}
+          title="Thank you for your submission!"
+          className="text-[13px]"
+        >
+          Please feel free to reach out to us if you have any questions or
+          require further assistance. We're here to help!
+        </Modal>
+      )}
+
       <Modal
-        opened={slowTransitionOpened}
-        onClose={() => setSlowTransitionOpened(false)}
-        title="Thank you for your submission!"
-        o="rotate-left"
-        className="text-[13px]"
+        opened={errorModalOpened || loading}
+        onClose={() => setErrorModalOpened(false)}
+        className="text-[13px] overflow-hidden bg-transparent"
+        size=""
+        centered
+        withCloseButton={false}
       >
-        Please feel free to reach out to us if you have any questions or require
-        further assistance. We're here to help!
+        {loading ? (
+          <Spinner
+            id="Spinner"
+            color="default"
+            className="mb-[-5px] mt-[5px] mx-[5px]"
+          />
+        ) : (
+          <>
+            An error occurred while submitting the form. Please try again later.
+          </>
+        )}
       </Modal>
 
       <form
@@ -116,12 +163,12 @@ function ContactForm() {
             label="Father Name"
             name="FatherName"
             value={formData.FatherName}
-            placeholder="Enter your father's name"
+            placeholder="Enter your Father name"
             inputWrapperOrder={["label", "error", "input", "description"]}
             styles={inputStyles}
             onChange={handleChange}
             required
-            className="Form_Grid_Boxes Grid_Inputs"
+            className="Form_Grid_Boxes Grid_Inputs Form_Grid_Boxes_FN"
           />
         </div>
         <div className="Form_Grid grid w-[82%] pt-2 mx-20 mb-2 gap-4 grid-cols-2">
@@ -177,18 +224,22 @@ function ContactForm() {
           />
         </div>
         <div className="Form_Grid grid w-[82%] mx-20 mb-2 gap-4 grid-cols-2">
-          <DateInput
-            label="Date of Birth"
-            name="Dob"
-            value={formData.Dob}
-            placeholder="Select your DOB"
-            styles={inputStyles}
-            onChange={(value) =>
-              setFormData((prevData) => ({ ...prevData, Dob: value }))
-            }
-            required
-            className="Grid_Inputs"
-          />
+          <Space direction="vertical" className="DateField Grid_Inputs">
+            <Typography.Text
+              className="DateTitle font-medium flex"
+              style={{ marginBottom: "-10px" }}
+            >
+              Date of Birth <p className="text-red-500">*</p>
+            </Typography.Text>
+            <DatePicker
+              format={customFormat}
+              onChange={handleDateChange}
+              placeholder="Select your DOB"
+              style={{ width: "100%", marginTop: "-9.5px" }}
+              required
+              className="Grid_Inputs DateInput h-[50px] rounded-[12px] border-gray-300 focus:border-emerald-400 focus:rounded-[14px]"
+            />
+          </Space>
           <TextInput
             label="Address"
             name="Address"

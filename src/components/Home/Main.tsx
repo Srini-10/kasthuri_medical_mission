@@ -3,6 +3,9 @@ import Doctor from "../../assets/Doctor.jpeg";
 import { Button } from "@nextui-org/react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import People1 from "../../assets/People1.png";
+import People2 from "../../assets/People2.png";
+import People3 from "../../assets/People3.png";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import "./css/Main.css";
 
@@ -30,7 +33,7 @@ function Main() {
           <div className="Main_Over absolute mt-[-600px] ml-0">
             <div className="Design_Main flex absolute ml-[990px] mt-[-50px] backdrop-blur-sm justify-end gap-2 rounded-xl p-1 w-[165px] items-center bg-transparent border-2 border-emerald-400">
               <LazyLoadImage
-                src="https://avatars.githubusercontent.com/u/30373425?v=4"
+                src={People2}
                 alt="Doctor"
                 effect="blur"
                 className="brightness-100 rounded-full border-gray-300 border-1"
@@ -44,7 +47,7 @@ function Main() {
                 draggable="false"
               />
               <LazyLoadImage
-                src="https://i.pravatar.cc/150?u=a04258114e29026702d"
+                src={People3}
                 alt="Doctor"
                 effect="blur"
                 className="brightness-100 rounded-full border-gray-300 border-1 ml-[-20px]"
@@ -58,7 +61,7 @@ function Main() {
                 draggable="false"
               />
               <LazyLoadImage
-                src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+                src={People1}
                 alt="Doctor"
                 effect="blur"
                 className="brightness-100 rounded-full border-gray-300 border-1 ml-[-20px]"
@@ -84,8 +87,22 @@ function Main() {
               <p className="text-emerald-400">Mission</p>
             </h1>
             <p className="Sub_Name text-gray-200 w-[580px] font-semibold mt-2">
-              ( AFFILIATED TO NATIONAL UNIVERSITY OF MEDICINE SCIENCE ) <br />(
-              APPROVED BY CENTRAL MEDICAL COUNCIL OF INDIA (CMC) )
+              AFFILIATED TO NATIONAL UNIVERSITY OF MEDICINE SCIENCE. <br />
+              <p className="flex">
+                APPROVED BY CENTRAL MEDICAL COUNCIL OF INDIA{" "}
+                <p className="text-emerald-400 flex">(</p>
+                <p className="text-white">CMC</p>
+                <p className="text-emerald-400">)</p>. <br />
+              </p>
+              <p className="mt-2">
+                REGULATION ON MEDICAL EDUCATION COURSES. <br />
+                <p className="flex">
+                  CERTIFICATE, DIPLOMA, DEGREE 1997 OF
+                  <p className="text-emerald-400 flex">(</p>
+                  <p className="text-white">MCI</p>
+                  <p className="text-emerald-400 flex">)</p>.
+                </p>
+              </p>
             </p>
             <Link to="#getStarted">
               <Button className="Get_Started bg-emerald-400 text-[16px] font-medium rounded-md mt-10 pt-2 pb-2 pl-5 pr-5">

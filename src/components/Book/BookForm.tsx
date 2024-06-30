@@ -1,14 +1,25 @@
 import React, { useState } from "react";
 import { TextInput, Select, Modal } from "@mantine/core";
 import { DateInput } from "@mantine/dates";
-import { Button } from "@nextui-org/react";
+import { Button, Spinner } from "@nextui-org/react";
 import axios from "axios";
 import "@mantine/core/styles.css";
 import "@mantine/dates/styles.css";
 import "./css/BookForm.css";
 
+import { DatePicker, DatePickerProps, Typography } from "antd";
+import { Space } from "antd/es";
+import dayjs from "dayjs";
+import customParseFormat from "dayjs/plugin/customParseFormat";
+
 function BookForm() {
+  dayjs.extend(customParseFormat);
+  const dateFormat = "DD/MM/YYYY";
+  const customFormat: DatePickerProps["format"] = (value) =>
+    `${value.format(dateFormat)}`;
+
   const [slowTransitionOpened, setSlowTransitionOpened] = useState(false);
+  const [errorModalOpened, setErrorModalOpened] = useState(false); // New state for error modal
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     Name: "",
@@ -20,6 +31,7 @@ function BookForm() {
     Dob: "",
     Address: "",
   });
+  const [loading, setLoading] = useState(false); // State for loading indicator
 
   const inputStyles = {
     input: {
@@ -48,18 +60,29 @@ function BookForm() {
     }));
   };
 
+  const handleDateChange = (date, dateString) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      Dob: dateString, // Ant Design's DatePicker provides dateString directly
+    }));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const formEle = document.querySelector(
-      ".Form_Main"
-    ) as HTMLFormElement | null;
+    setLoading(true); // Set loading to true while submitting
+
+    const formEle = document.querySelector(".Form_MainB");
+
     if (formEle) {
-      const formData = new FormData(formEle);
+      const data = new FormData(formEle);
+
+      // Manually append the date as a string to the FormData
+      data.append("Dob", formData.Dob);
 
       axios
         .post(
           "https://script.google.com/macros/s/AKfycbwoTMSPugGD0L6xjMa8LnDFD_aQyFnxpuHdlAcs94X9K2uqOLn74iUro8HUuvbmr1wd/exec",
-          formData
+          data
         )
         .then((response) => {
           console.log("Form submitted successfully:", response);
@@ -71,140 +94,173 @@ function BookForm() {
             Email: "",
             Age: "",
             Gender: "",
-            Dob: "",
+            Dob: null,
             Address: "",
           });
           formEle.reset();
-          setSlowTransitionOpened(true); // Open modal after successful submission
+          setSlowTransitionOpened(true); // Open success modal after successful submission
+        })
+        .finally(() => {
+          setLoading(false); // Set loading to false after submission completes
         })
         .catch((error) => {
           console.error("Error submitting form:", error);
+          setErrorModalOpened(true); // Open error modal after failed submission
         });
     }
   };
 
   return (
     <div>
+      {!loading && (
+        <Modal
+          opened={slowTransitionOpened}
+          onClose={() => setSlowTransitionOpened(false)}
+          title="Thank you for your submission!"
+          className="text-[13px]"
+        >
+          Please feel free to reach out to us if you have any questions or
+          require further assistance. We're here to help!
+        </Modal>
+      )}
+
       <Modal
-        opened={slowTransitionOpened}
-        onClose={() => setSlowTransitionOpened(false)}
-        title="Thank you for your submission!"
-        o="rotate-left"
-        className="text-[13px]"
+        opened={errorModalOpened || loading}
+        onClose={() => setErrorModalOpened(false)}
+        className="text-[13px] overflow-hidden bg-transparent"
+        size=""
+        centered
+        withCloseButton={false}
       >
-        Please feel free to reach out to us if you have any questions or require
-        further assistance. We're here to help!
+        {loading ? (
+          <Spinner
+            id="Spinner"
+            color="default"
+            className="mb-[-5px] mt-[5px] mx-[5px]"
+          />
+        ) : (
+          <>
+            An error occurred while submitting the form. Please try again later.
+          </>
+        )}
       </Modal>
 
       <form onSubmit={handleSubmit} className="Form_MainB">
-        <h1 className="Form_Title text-[35px] gap-[12px] text-black mt-2 ml-20 flex font-bold">
-          Book <p className="text-emerald-400">Appointment</p>
-        </h1>
-        <div className="Form_Grid grid w-[82%] pt-0 mx-20 mt-3 mb-2 gap-4 grid-cols-2">
-          <TextInput
-            label="Name"
-            name="Name"
-            value={formData.Name}
-            placeholder="Enter your name"
-            inputWrapperOrder={["label", "error", "input", "description"]}
-            styles={inputStyles}
-            onChange={handleChange}
-            required
-            width={100}
-          />
-          <TextInput
-            label="Father Name"
-            name="FatherName"
-            value={formData.FatherName}
-            placeholder="Enter your father's name"
-            inputWrapperOrder={["label", "error", "input", "description"]}
-            styles={inputStyles}
-            onChange={handleChange}
-            required
-            className="Form_Grid_Boxes"
-          />
+        <div>
+          <h1 className="Form_Title text-[35px] gap-[12px] text-black mt-2 ml-20 flex font-bold">
+            Book <p className="text-emerald-400">Appointment</p>
+          </h1>
+          <div className="Form_Grid grid w-[82%] pt-0 mx-20 mt-3 mb-2 gap-4 grid-cols-2">
+            <TextInput
+              label="Name"
+              name="Name"
+              value={formData.Name}
+              placeholder="Enter your name"
+              inputWrapperOrder={["label", "error", "input", "description"]}
+              styles={inputStyles}
+              onChange={handleChange}
+              required
+              width={100}
+            />
+            <TextInput
+              label="Father Name"
+              name="FatherName"
+              value={formData.FatherName}
+              placeholder="Enter your Father name"
+              inputWrapperOrder={["label", "error", "input", "description"]}
+              styles={inputStyles}
+              onChange={handleChange}
+              required
+              className="Form_Grid_Boxes"
+            />
+          </div>
+          <div className="Form_Grid grid w-[82%] pt-2 mx-20 mb-2 gap-4 grid-cols-2">
+            <TextInput
+              label="Phone"
+              name="Phone"
+              value={formData.Phone}
+              placeholder="Enter your number"
+              inputWrapperOrder={["label", "error", "input", "description"]}
+              styles={inputStyles}
+              onChange={handleChange}
+              required
+            />
+            <TextInput
+              label="Email"
+              name="Email"
+              value={formData.Email}
+              placeholder="Enter your email"
+              inputWrapperOrder={["label", "error", "input", "description"]}
+              styles={inputStyles}
+              onChange={handleChange}
+              required
+              className="Form_Grid_Boxes"
+            />
+          </div>
+          <div className="Form_Grid grid w-[82%] mx-20 mb-2 gap-4 grid-cols-2">
+            <TextInput
+              label="Age"
+              name="Age"
+              value={formData.Age}
+              placeholder="Enter your age"
+              inputWrapperOrder={["label", "error", "input", "description"]}
+              styles={inputStyles}
+              onChange={handleChange}
+              required
+            />
+            <Select
+              label="Gender"
+              name="Gender"
+              value={formData.Gender}
+              placeholder="Select your gender"
+              data={[
+                { value: "male", label: "Male" },
+                { value: "female", label: "Female" },
+                { value: "other", label: "Other" },
+              ]}
+              styles={inputStyles}
+              onChange={(value) => handleGenderChange(value)}
+              required
+              className="Form_Grid_Boxes"
+            />
+          </div>
+          <div className="Form_Grid grid w-[82%] mx-20 mb-2 gap-4 grid-cols-2">
+            <Space direction="vertical">
+              <Typography.Text
+                className="font-medium flex"
+                style={{ marginBottom: "-10px" }}
+              >
+                Date of Birth <p className="text-red-500">*</p>
+              </Typography.Text>
+              <DatePicker
+                format={customFormat}
+                onChange={handleDateChange}
+                placeholder="Select your DOB"
+                style={{ width: "100%", marginTop: "-9.5px" }}
+                required
+                className="Grid_Inputs h-[50px] rounded-[12px] border-gray-300 focus:border-emerald-400 focus:rounded-[14px]"
+              />
+            </Space>
+            <TextInput
+              label="Address"
+              name="Address"
+              value={formData.Address}
+              placeholder="Enter your address"
+              inputWrapperOrder={["label", "error", "input", "description"]}
+              styles={inputStyles}
+              onChange={handleChange}
+              required
+              className="Form_Grid_Boxes"
+            />
+          </div>
+          <Button
+            type="submit"
+            variant="default"
+            className="Form_Button text-[20px] mt-4 ml-20 bg-emerald-400 py-3 px-10 text-black rounded-lg font-medium leading-[70px]"
+          >
+            Submit
+          </Button>
         </div>
-        <div className="Form_Grid grid w-[82%] pt-2 mx-20 mb-2 gap-4 grid-cols-2">
-          <TextInput
-            label="Phone"
-            name="Phone"
-            value={formData.Phone}
-            placeholder="Enter your number"
-            inputWrapperOrder={["label", "error", "input", "description"]}
-            styles={inputStyles}
-            onChange={handleChange}
-            required
-          />
-          <TextInput
-            label="Email"
-            name="Email"
-            value={formData.Email}
-            placeholder="Enter your email"
-            inputWrapperOrder={["label", "error", "input", "description"]}
-            styles={inputStyles}
-            onChange={handleChange}
-            required
-            className="Form_Grid_Boxes"
-          />
-        </div>
-        <div className="Form_Grid grid w-[82%] mx-20 mb-2 gap-4 grid-cols-2">
-          <TextInput
-            label="Age"
-            name="Age"
-            value={formData.Age}
-            placeholder="Enter your age"
-            inputWrapperOrder={["label", "error", "input", "description"]}
-            styles={inputStyles}
-            onChange={handleChange}
-            required
-          />
-          <Select
-            label="Gender"
-            name="Gender"
-            value={formData.Gender}
-            placeholder="Select your gender"
-            data={[
-              { value: "male", label: "Male" },
-              { value: "female", label: "Female" },
-              { value: "other", label: "Other" },
-            ]}
-            styles={inputStyles}
-            onChange={(value) => handleGenderChange(value)}
-            required
-            className="Form_Grid_Boxes"
-          />
-        </div>
-        <div className="Form_Grid grid w-[82%] mx-20 mb-2 gap-4 grid-cols-2">
-          <DateInput
-            label="Date of Birth"
-            name="Dob"
-            value={formData.Dob}
-            placeholder="Select your DOB"
-            styles={inputStyles}
-            onChange={(value) =>
-              setFormData((prevData) => ({ ...prevData, Dob: value }))
-            }
-            required
-          />
-          <TextInput
-            label="Address"
-            name="Address"
-            value={formData.Address}
-            placeholder="Enter your address"
-            inputWrapperOrder={["label", "error", "input", "description"]}
-            styles={inputStyles}
-            onChange={handleChange}
-            required
-            className="Form_Grid_Boxes"
-          />
-        </div>
-        <Button
-          type="submit"
-          variant="default"
-          className="Form_Button text-[20px] mt-4 ml-20 bg-emerald-400 py-3 px-10 text-black rounded-lg font-medium leading-[70px]"
-        >
-          Submit
-        </Button>
       </form>
     </div>
   );

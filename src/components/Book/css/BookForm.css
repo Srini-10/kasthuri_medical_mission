@@ -18,4 +18,25 @@
     margin-top: 15px;
     margin-left: -40px;
   }
+  .Grid_Inputs {
+    margin-left: 0px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .Form_MainB {
+    margin: 0px;
+    padding: 0px;
+  }
+  .Form_Grid {
+    margin-left: 0px;
+    min-width: 100%;
+  }
+  .Form_Title {
+    justify-content: center;
+    margin-left: 0px;
+  }
+  .Form_Button {
+    margin-left: 0px;
+  }
 }

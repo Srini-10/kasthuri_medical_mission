@@ -9,7 +9,7 @@
 @media (max-width: 640px) {
   .Book_Main {
     width: 100%;
-    height: 1400px;
+    min-height: 1400px;
     margin-top: 60px;
   }
   .Book_Header {
@@ -33,6 +33,7 @@
   .Book_Title h1 {
     font-size: 30px;
     line-height: 32px;
+    width: 100%;
   }
   .Book_Sub {
     margin-top: 10px;
@@ -53,12 +54,24 @@
     margin-left: -20px;
     width: 70%;
   }
+  .Contact_Design_Cont1_Span p {
+    font-size: 11px;
+  }
   .Book_Design_Cont2 {
     margin-left: 57%;
     margin-right: -30px;
     margin-top: -200px;
     padding: 0px;
-    scale: 0.7;
+    scale: 1;
+  }
+  .Contact_Design2 {
+    margin-top: 30px;
+  }
+  .Contact_Design_Image2 {
+    margin-left: 20px;
+  }
+  .Contact_Design_Contents {
+    margin-top: 25px;
   }
   .Book_Design_Cont2_Div {
     width: 43px;
@@ -72,5 +85,101 @@
     flex-wrap: wrap;
     width: 100%;
     margin-left: 0px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .Book_Main {
+    width: 100%;
+    height: 1300px;
+    margin-top: 60px;
+  }
+  .Book_Header {
+    width: 100%;
+    height: 230px;
+    padding: 0px;
+    justify-content: space-between;
+    margin-left: 0px;
+    display: flex;
+  }
+  .Contact_Design2 {
+    margin-top: -22px;
+    width: 300px;
+    margin-left: -300px;
+  }
+  .Contact_Design_Image2 {
+    margin-top: 40px;
+    width: 250px;
+    height: 250px;
+  }
+  .Book_Title {
+    width: 90%;
+    margin-top: -40px;
+    margin-left: 30px;
+  }
+  .Book_Title h1 {
+    width: 355px;
+    flex-wrap: nowrap;
+  }
+  .Book_Title h1,
+  .Book_Title b {
+    font-size: 30px;
+    line-height: 32px;
+  }
+  .Book_Sub {
+    margin-top: 10px;
+    width: 90%;
+    font-size: 12px;
+  }
+  .Book_Form_Contact {
+    margin-top: 0px;
+  }
+  .Contact_Design_Cont1 {
+    margin-top: -260px;
+  }
+  .Contact_Design_Cont2 {
+    margin-left: 145px;
+    margin-top: -120px;
+    width: 155px;
+    scale: 0.7;
+  }
+  .Contact_Design_Cont2_Div {
+    padding: 0px;
+    padding-top: 2.5px;
+    max-width: 40px;
+    max-height: 40px;
+    margin-right: 20px;
+  }
+  .Contact_Design_Cont2_Image {
+    gap: 0px;
+    padding: 0px;
+  }
+  .Contact_Design_Cont2_Div {
+    padding: 0px;
+    padding-top: 2.5px;
+    width: 43px;
+    height: 40px;
+    margin-right: 20px;
+  }
+  .Contact_Design_Cont2_Img {
+    margin-left: 3px;
+  }
+  .Contact_Design_Cont2_Cont {
+    margin-left: -10px;
+  }
+  .Contact_Design_Cont2_Cont h1 {
+    font-size: 15px;
+  }
+  .Contact_Design_Cont2_Cont p {
+    font-size: 10px;
+  }
+
+  /* Form */
+  .Book_Form_Contact {
+    flex-wrap: wrap;
+    width: 100%;
+    padding: auto;
+    margin: auto;
+    justify-content: center;
   }
 }
