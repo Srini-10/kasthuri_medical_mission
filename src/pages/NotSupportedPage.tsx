@@ -3,19 +3,18 @@ import { Illustration } from "./NotSupportedScreen/IllustrationNSP.tsx";
 import classes from "./NotSupportedScreen/NotSupportedScreen.module.css";
 import "./NotSupportedScreen/NotSupportedScreen.css";
 import React from "react";
-import { Link } from "react-router-dom";
 
 function NotSupportedPage() {
   return (
-    <div className="Error_Page mt-[200px]">
+    <div className="NSP max-w-[90%] mx-auto mt-[140px]">
       <Container className={classes.root}>
         <div className={classes.inner}>
           <div className="">
             <Illustration className={classes.image} />
           </div>
           <div className={classes.content}>
-            <div className="Error_Page_Contents mt-[200px] absolute">
-              <Title className={classes.title} id="error-page-title">
+            <div className="NSP_Contents mt-[210px] absolute">
+              <Title className={classes.title} id="NSP-title">
                 Ooops...!
               </Title>
               <Text
@@ -23,7 +22,7 @@ function NotSupportedPage() {
                 size="lg"
                 ta="center"
                 className={classes.description}
-                id="error-page-description"
+                id="NSP-description"
               >
                 This website is not supported on your device. Please try
                 accessing it from a different device or check for compatibility
