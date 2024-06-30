@@ -238,8 +238,8 @@
 
 /* If the Course Curriculum is False */
 .Optional_Course_Main {
-  height: 75vh;
-  /* height: 590px; */
+  /* height: 75vh; */
+  height: 590px;
 }
 .Optional_Card {
   height: 412px;

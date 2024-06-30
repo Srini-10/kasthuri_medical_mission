@@ -1,11 +1,11 @@
 import { Container, Title, Text, Button, Group } from "@mantine/core";
-import { Illustration } from "./ErrorPage/IllustrationEP.tsx";
-import classes from "./ErrorPage/ErrorPage.module.css";
-import "./ErrorPage/ErrorPage.css";
+import { Illustration } from "./NotSupportedScreen/IllustrationNSP.tsx";
+import classes from "./NotSupportedScreen/NotSupportedScreen.module.css";
+import "./NotSupportedScreen/NotSupportedScreen.css";
 import React from "react";
 import { Link } from "react-router-dom";
 
-function ErrorPage() {
+function NotSupportedPage() {
   return (
     <div className="Error_Page mt-[200px]">
       <Container className={classes.root}>
@@ -16,7 +16,7 @@ function ErrorPage() {
           <div className={classes.content}>
             <div className="Error_Page_Contents mt-[200px] absolute">
               <Title className={classes.title} id="error-page-title">
-                Nothing to see here
+                Ooops...!
               </Title>
               <Text
                 c="dimmed"
@@ -25,16 +25,14 @@ function ErrorPage() {
                 className={classes.description}
                 id="error-page-description"
               >
-                Page you are trying to open does not exist. You may have
-                mistyped the address, or the page has been moved to another URL.
-                If you think this is an error contact support.
+                This website is not supported on your device. Please try
+                accessing it from a different device or check for compatibility
+                updates.
               </Text>
               <Group justify="center">
-                <Link to="/">
-                  <Button size="md" color="#34d399" className="bg-emerald-400">
-                    Back to Home Page
-                  </Button>
-                </Link>
+                <Button size="md" color="#34d399" className="bg-emerald-400">
+                  Try again
+                </Button>
               </Group>
             </div>
           </div>
@@ -44,4 +42,4 @@ function ErrorPage() {
   );
 }
 
-export default ErrorPage;
+export default NotSupportedPage;

@@ -109,32 +109,32 @@ function Main() {
                 Get Started
               </Button>
             </Link>
-          </div>
-          <p className="Main_Quote absolute mt-[-85px] font-medium left-[250px] text-gray-300">
-            To cure sometimes, to relieve often, to comfort always.
-          </p>
-          <div className="Success flex flex-row absolute right-0 mt-[-120px] backdrop-blur-sm gap-2 rounded-tl-xl p-1 h-[120px] w-[700px] items-center bg-transparent border-t-2 border-l-2 border-emerald-400">
-            <div className="Success_Main flex p-5 gap-[35px]">
-              <p className="Font_Main text-white text-[15px] pr-1">
-                <b className="text-[30px]">30+</b>
-                <br />
-                Years of experience
-              </p>
-              <p className="Font_Main text-white text-[15px] pr-1">
-                <b className="text-[30px]">10+</b>
-                <br />
-                Medical Trainers
-              </p>
-              <p className="Font_Main text-white text-[15px] pr-1">
-                <b className="text-[30px]">5+</b>
-                <br />
-                Laboratories
-              </p>
-              <p className="Font_Main text-white text-[15px] pr-1">
-                <b className="text-[30px]">3000+</b>
-                <br />
-                Students Trained
-              </p>
+            <p className="Main_Quote mt-[135px] font-medium ml-[100px] text-gray-300">
+              To cure sometimes, to relieve often, to comfort always.
+            </p>
+            <div className="Success flex flex-row absolute ml-[605px] mt-[-55px] backdrop-blur-sm gap-2 rounded-tl-xl p-1 h-[120px] w-[2900px] items-center bg-transparent border-t-2 border-l-2 border-emerald-400">
+              <div className="Success_Main flex p-5 gap-[35px]">
+                <p className="Font_Main text-white text-[15px] pr-1">
+                  <b className="text-[30px]">30+</b>
+                  <br />
+                  Years of experience
+                </p>
+                <p className="Font_Main text-white text-[15px] pr-1">
+                  <b className="text-[30px]">10+</b>
+                  <br />
+                  Medical Trainers
+                </p>
+                <p className="Font_Main text-white text-[15px] pr-1">
+                  <b className="text-[30px]">5+</b>
+                  <br />
+                  Laboratories
+                </p>
+                <p className="Font_Main text-white text-[15px] pr-1">
+                  <b className="text-[30px]">3000+</b>
+                  <br />
+                  Students Trained
+                </p>
+              </div>
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-/* App.css */
+/* Loading Animation */
 .loader-container {
   display: flex;
   justify-content: center;
@@ -6,3 +6,20 @@
   height: 100vh;
 }
 
+@media (min-width: 641px) and (max-width: 767px) {
+  .Not_Supported_Screen_Alert {
+    display: block;
+  }
+  .App_Main {
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1345px) {
+  .Not_Supported_Screen_Alert {
+    display: block;
+  }
+  .App_Main {
+    display: none;
+  }
+}

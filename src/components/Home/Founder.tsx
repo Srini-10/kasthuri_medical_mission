@@ -10,7 +10,7 @@ const Founder = () => {
   return (
     <>
       <div className="Specialist_Main flex justify-center items-center h-[480px] bg-emerald-50">
-        <div className="Specialist_Container w-[1080px] items-center relative bg-emerald-400 max-h-[30vh] mb-[-100px] pl-14 py-10 rounded-xl">
+        <div className="Specialist_Container w-[1080px] items-center relative bg-emerald-400 max-h-[220px] mb-[-100px] pl-14 py-10 rounded-xl">
           <h1 className="Specialist_Name flex gap-2 text-black font-bold text-[42px]">
             Major <p>Dr.P.A.Subramanian <b className="font-bold text-gray-600">A.M.C.,</b></p>
           </h1>

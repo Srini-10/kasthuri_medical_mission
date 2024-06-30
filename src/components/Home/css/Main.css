@@ -30,7 +30,7 @@
     min-width: 60%;
     max-width: 60%;
     margin-left: 0px;
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .Get_Started {
@@ -55,17 +55,30 @@
 
   .Main_Quote {
     font-size: 10px;
-    margin-left: -150px; /* Adjusted margin for better alignment */
-    margin-top: -300px;
-    bottom: 130px;
+    margin-top: 230px;
+    margin-left: 30px;
+  }
+
+  /* .Main_Quote {
+    font-size: 12px;
+    margin-top: 70px;
   }
 
   .Success {
-    bottom: 0;
-    width: 330px;
+    scale: 0.9;
+    margin-left: 30px;
+    margin-top: 8px;
+    width: 5500px;
+    height: 100px;
+  } */
+
+  .Success {
     font-size: 12px;
-    position: absolute;
-    right: 0; /* Align to the right side */
+    scale: 0.8;
+    margin-left: -560px;
+    margin-top: 8px;
+    width: 5500px;
+    height: 100px;
   }
 
   .Success_Main {
@@ -80,14 +93,6 @@
 
   .Font_Main b {
     font-size: 15px;
-  }
-}
-
-@media (min-width: 641px) and (max-width: 767px) {
-  .Main_Quote {
-    font-size: 12px;
-    left: 270px;
-    bottom: 140px;
   }
 }
 
@@ -148,16 +153,15 @@
 
   .Main_Quote {
     font-size: 12px;
-    margin-left: -90px; /* Adjusted margin for better alignment */
-    margin-top: -300px;
-    bottom: 130px;
+    margin-top: 70px;
   }
 
   .Success {
-    bottom: 0;
-    width: 500px;
-    position: absolute;
-    right: 0;
+    scale: 0.9;
+    margin-left: 30px;
+    margin-top: 8px;
+    width: 5500px;
+    height: 100px;
   }
 
   .Success_Main {

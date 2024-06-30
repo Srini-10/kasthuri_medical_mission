@@ -11,6 +11,7 @@ import Book from "./pages/BookApp.tsx";
 import ErrorPage from "./pages/ErrorPage.tsx";
 import Founders from "./pages/Founders.tsx";
 import "./App.css";
+import NotSupportedPage from "./pages/NotSupportedPage.tsx";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -27,6 +28,10 @@ function App() {
 
   return (
     <div className="App">
+      <div className="Not_Supported_Screen_Alert hidden">
+        {/* Not Supported Screen Ratios and Media Queries */}
+        <NotSupportedPage />
+      </div>
       <div className="App_Main">
         <Nav />
         {loading ? (
