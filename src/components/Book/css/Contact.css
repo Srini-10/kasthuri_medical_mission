@@ -57,3 +57,9 @@
     margin-left: 0px;
   }
 }
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .Contact_Main2 {
+    margin-left: 50px;
+  }
+}

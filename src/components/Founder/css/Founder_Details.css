@@ -112,3 +112,21 @@
   }
 */
 }
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .SD_Main2 {
+    max-width: 1200px;
+    scale: 1;
+  }
+  .Specialist_Img {
+    margin-left: -40px;
+  }
+  .Container_Design {
+    margin-left: 1050px;
+    display: none;
+    scale: 1;
+  }
+  .SD_ContentsF {
+    margin-left: -40px;
+  }
+}

@@ -15,7 +15,7 @@
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1345px) {
+@media (min-width: 1025px) and (max-width: 1250px) {
   .Not_Supported_Screen_Alert {
     display: block;
   }

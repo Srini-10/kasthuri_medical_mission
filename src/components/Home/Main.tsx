@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Doctor from "../../assets/Doctor.jpeg";
 import { Button } from "@nextui-org/react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
@@ -18,7 +18,7 @@ function Main() {
             src={Doctor}
             alt="Doctor"
             effect="blur"
-            className="brightness-[70%] Bg_Main"
+            className="brightness-[70%] mt-[-110px] Bg_Main"
             style={{
               height: "auto",
               width: "100%",
@@ -90,17 +90,17 @@ function Main() {
               AFFILIATED TO NATIONAL UNIVERSITY OF MEDICINE SCIENCE. <br />
               <p className="flex">
                 APPROVED BY CENTRAL MEDICAL COUNCIL OF INDIA{" "}
-                <p className="text-emerald-400 flex">(</p>
-                <p className="text-white">CMC</p>
-                <p className="text-emerald-400">)</p>. <br />
+                <span className="text-emerald-400">(</span>
+                <span className="text-white">CMC</span>
+                <span className="text-emerald-400">)</span>. <br />
               </p>
               <p className="mt-2">
                 REGULATION ON MEDICAL EDUCATION COURSES. <br />
                 <p className="flex">
                   CERTIFICATE, DIPLOMA, DEGREE 1997 OF
-                  <p className="text-emerald-400 flex">(</p>
-                  <p className="text-white">MCI</p>
-                  <p className="text-emerald-400 flex">)</p>.
+                  <span className="text-emerald-400">(</span>
+                  <span className="text-white">MCI</span>
+                  <span className="text-emerald-400">)</span>.
                 </p>
               </p>
             </p>
@@ -109,10 +109,10 @@ function Main() {
                 Get Started
               </Button>
             </Link>
-            <p className="Main_Quote mt-[135px] font-medium ml-[100px] text-gray-300">
+            <p className="Main_Quote mt-[135px] font-medium w-[420px] rounded-3xl p-0.5 px-1 ml-[80px] bg-transparent backdrop-blur-[2px] text-gray-300">
               To cure sometimes, to relieve often, to comfort always.
             </p>
-            <div className="Success flex flex-row absolute ml-[605px] mt-[-55px] backdrop-blur-sm gap-2 rounded-tl-xl p-1 h-[120px] w-[2900px] items-center bg-transparent border-t-2 border-l-2 border-emerald-400">
+            <div className="Success flex flex-row absolute ml-[650px] mt-[-55px] backdrop-blur-sm gap-2 rounded-tl-xl p-1 h-[120px] min-w-[5500px] items-center bg-transparent border-t-2 border-l-2 border-emerald-400">
               <div className="Success_Main flex p-5 gap-[35px]">
                 <p className="Font_Main text-white text-[15px] pr-1">
                   <b className="text-[30px]">30+</b>

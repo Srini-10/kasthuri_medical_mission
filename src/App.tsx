@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { Spinner } from "@nextui-org/react";
+import DisableZoom from "./DisableZoom.tsx";
 
 import Nav from "./components/Navbar.tsx";
 import Home from "./pages/Home.tsx";
@@ -29,6 +30,8 @@ function App() {
   return (
     <div className="App">
       <div className="Not_Supported_Screen_Alert hidden">
+        {/* Browser Zoom Disabling */}
+        <DisableZoom />
         {/* Not Supported Screen Ratios and Media Queries */}
         <NotSupportedPage />
       </div>

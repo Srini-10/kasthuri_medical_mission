@@ -40,3 +40,9 @@
     margin-left: 0px;
   }
 }
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .Form_MainB {
+    margin-left: -30px;
+  }
+}

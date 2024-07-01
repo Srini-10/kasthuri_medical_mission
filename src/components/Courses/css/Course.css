@@ -64,7 +64,7 @@
   background: none;
   padding: 0;
   margin-top: -20px;
-  margin-left: 50%;
+  margin-left: 825px;
   position: absolute;
 }
 
@@ -199,8 +199,8 @@
   .popup-content {
     max-width: 600px;
     min-width: 600px;
-    min-height: 700px;
-    max-height: 700px;
+    min-height: 80vh;
+    max-height: 80vh;
   }
   .Popup_Grid_Points {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -209,8 +209,8 @@
     font-size: 15px;
   }
   .popup-close {
-    margin-left: 81%;
-    margin-top: -4%;
+    margin-left: 535px;
+    margin-top: -40px;
   }
   .popup-footer2 {
     margin-top: 0px;
@@ -295,5 +295,24 @@
   }
   .Optional_Button {
     display: block;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .popup-overlay {
+    max-width: 600px;
+    min-width: 600px;
+    min-height: 700px;
+    max-height: 700px;
+  }
+  .popup-content {
+    max-width: 800px;
+    min-width: 800px;
+    min-height: 80vh;
+    max-height: 80vh;
+  }
+  .popup-close {
+    margin-left: 725px;
+    margin-top: -25px;
   }
 }

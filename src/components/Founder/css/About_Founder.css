@@ -207,3 +207,16 @@
     display: none;
   }
 }
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .About_Me {
+    width: 100%;
+  }
+  .Container_Design {
+    margin-left: -160px;
+  }
+  .SD_MainAS {
+    max-width: 100%;
+    scale: 0.95;
+  }
+}
