@@ -16,7 +16,7 @@ function Works() {
           </p>
         </div>
         <div className="Container_Works2 absolute justify-between ml-[370px] gap-[100px] flex mb-[-30px] mt-[30px]">
-          <div className="Container_Designs rotate-[30deg] transform scale-y-[-1]">
+          <div className="Container_Designs1 rotate-[30deg] transform scale-y-[-1]">
             <Player
               autoplay
               loop
@@ -25,7 +25,7 @@ function Works() {
               className="Design1"
             />
           </div>
-          <div className="Container_Designs rotate-[-35deg] mt-[-30px] transform">
+          <div className="Container_Designs2 rotate-[-35deg] mt-[-30px] transform">
             <Player
               autoplay
               loop
@@ -70,8 +70,8 @@ function Works() {
               <h1 className="Container_Works_Ttl mt-3">Registration</h1>
             </span>
             <p className="Container_Works_Des text-[15px] mt-3 font-normal text-gray-700 text-center">
-              Complete your registration at our office to enroll in the program
-              and begin your journey towards a career in medicine.
+              Register at our office to enroll in the program and start your
+              journey towards a medical career.
             </p>
           </div>
         </div>
