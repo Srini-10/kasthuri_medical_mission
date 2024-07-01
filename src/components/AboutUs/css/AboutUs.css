@@ -132,3 +132,10 @@
   width: 100%;
   margin: 10px auto 0;
 }
+
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .About_MainA {
+    max-width: 81%;
+  }
+}
