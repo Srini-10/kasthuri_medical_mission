@@ -12,7 +12,7 @@ import Book from "./pages/BookApp.tsx";
 import ErrorPage from "./pages/ErrorPage.tsx";
 import Founders from "./pages/Founders.tsx";
 import "./App.css";
-import NotSupportedPage from "./pages/NotSupportedPage.tsx";
+import NotSupportedPage from "./pages/NotSupportedScreen/NotSupportedPage.tsx";
 
 function App() {
   const [loading, setLoading] = useState(true);

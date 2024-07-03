@@ -1,7 +1,7 @@
 import { Container, Title, Text, Button, Group } from "@mantine/core";
-import { Illustration } from "./NotSupportedScreen/IllustrationNSP.tsx";
-import classes from "./NotSupportedScreen/NotSupportedScreen.module.css";
-import "./NotSupportedScreen/NotSupportedScreen.css";
+import { Illustration } from "./IllustrationNSP.tsx";
+import classes from "./NotSupportedScreen.module.css";
+import "./NotSupportedScreen.css";
 import React from "react";
 
 function NotSupportedPage() {

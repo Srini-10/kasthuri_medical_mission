@@ -160,7 +160,7 @@ const Course = () => {
               Empowering Future Healthcare Leaders with Excellence in Education.
             </p>
           </div>
-          <div className="Course_Containers max-w-[1250px] mx-auto grid-cols-3 scale-[90%] mb-24 grid gap-4 justify-center h-[800px] mt-0">
+          <div className="Course_Containers max-w-[1250px] mx-auto grid-cols-3 scale-[90%] mb-24 grid gap-4 justify-center mt-0">
             {courses.map((course, index) => (
               <div
                 key={index}
@@ -350,7 +350,7 @@ const Course = () => {
             Know more about our Curriculum
           </Button>
         </div>
-        <div className="Course_Footer">
+        <div className="Course_Footer mt-2 z-50">
           <Footer />
         </div>
       </div>
