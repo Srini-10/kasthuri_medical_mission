@@ -73,7 +73,7 @@ function ContactForm() {
 
     try {
       const response = await fetch(
-        "https://kasthuri-medical-mission-backend.vercel.app",
+        "https://kasthuri-medical-mission-backend.vercel.app/send-email",
         {
           // Ensure this matches the server port
           method: "POST",
