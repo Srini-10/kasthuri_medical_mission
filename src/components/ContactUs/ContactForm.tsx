@@ -72,14 +72,17 @@ function ContactForm() {
     setLoading(true); // Set loading to true while submitting
 
     try {
-      const response = await fetch("http://localhost:4000/send-email", {
-        // Ensure this matches the server port
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://kasthuri-medical-mission-backend.vercel.app",
+        {
+          // Ensure this matches the server port
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Network response was not ok");
