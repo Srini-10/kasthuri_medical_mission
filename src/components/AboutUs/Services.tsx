@@ -1,7 +1,6 @@
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import Tick from "../../assets/Tick.svg";
 import Icon1 from "../../assets/Clinic-Building.svg";
 import Icon2 from "../../assets/Doctor_Icon.svg";
 import Icon3 from "../../assets/Inject.svg";

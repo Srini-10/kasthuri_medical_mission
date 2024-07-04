@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.47d536c1.css",
-    "main.js": "/static/js/main.2a2ab291.js",
+    "main.css": "/static/css/main.56f1ff96.css",
+    "main.js": "/static/js/main.31aa87ed.js",
     "static/media/Record1.jpg": "/static/media/Record1.147663c5a8e7618cd567.jpg",
     "static/media/Record2.jpg": "/static/media/Record2.ac3e5e3e56738ed97329.jpg",
     "static/media/Record5.jpg": "/static/media/Record5.9cc82a7d6280aa46a523.jpg",
@@ -13,13 +13,12 @@
     "static/media/kmm.png": "/static/media/kmm.40bb8d68fa035c8d081f.png",
     "static/media/People6.png": "/static/media/People6.e2b6eb36580ad7d0032b.png",
     "static/media/People5.png": "/static/media/People5.95b0cdffffdb93efea64.png",
-    "static/media/Subramanian.png": "/static/media/Subramanian.ce3f9234968fc4fbb9e5.png",
+    "static/media/Subramanian.png": "/static/media/Subramanian.e927b10b0892d2e027a5.png",
     "static/media/Contact_Doctor.png": "/static/media/Contact_Doctor.00d47dbc5e7193f25826.png",
     "static/media/Map.png": "/static/media/Map.d13e96012277ce4065ca.png",
     "static/media/People2.png": "/static/media/People2.48f3c8dffd2ea7193e4b.png",
     "static/media/People1.png": "/static/media/People1.06035e50ddf2b544173f.png",
     "static/media/People3.png": "/static/media/People3.1a7f012c41298f0a25e5.png",
-    "static/media/Oops.svg": "/static/media/Oops.06d2661274f7bb1aa49ee71e6a7e4328.svg",
     "static/media/Medicine.svg": "/static/media/Medicine.b67bde65249d4327cc391df5ce315d75.svg",
     "static/media/Clinic-Building.svg": "/static/media/Clinic-Building.f0eec6dfa1cc011d071d7bfed36b5107.svg",
     "static/media/Doctor_Icon.svg": "/static/media/Doctor_Icon.0b2ca9ce96a0d933022c8253bbb14a6c.svg",
@@ -35,11 +34,11 @@
     "static/media/Mail.svg": "/static/media/Mail.013a1f471ce863fd67957b2e656e821a.svg",
     "static/media/Tick.svg": "/static/media/Tick.304723d05f2b87491daeec5dbbdf943e.svg",
     "static/media/Location.svg": "/static/media/Location.219155f869a0d7ea986a738723375490.svg",
-    "main.47d536c1.css.map": "/static/css/main.47d536c1.css.map",
-    "main.2a2ab291.js.map": "/static/js/main.2a2ab291.js.map"
+    "main.56f1ff96.css.map": "/static/css/main.56f1ff96.css.map",
+    "main.31aa87ed.js.map": "/static/js/main.31aa87ed.js.map"
   },
   "entrypoints": [
-    "static/css/main.47d536c1.css",
-    "static/js/main.2a2ab291.js"
+    "static/css/main.56f1ff96.css",
+    "static/js/main.31aa87ed.js"
   ]
 }

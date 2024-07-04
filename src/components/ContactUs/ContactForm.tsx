@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import { TextInput, Select, Modal, Loader } from "@mantine/core";
 import { Button, Spinner } from "@nextui-org/react";
@@ -29,6 +30,7 @@ function ContactForm() {
     Dob: null,
     Address: "",
   });
+
   const [loading, setLoading] = useState(false); // State for loading indicator
 
   const inputStyles = {
@@ -65,46 +67,65 @@ function ContactForm() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true); // Set loading to true while submitting
 
-    const formEle = document.querySelector(".Form_MainC");
+    try {
+      const response = await fetch("http://localhost:4000/send-email", {
+        // Ensure this matches the server port
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    if (formEle) {
-      const data = new FormData(formEle);
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
 
-      // Manually append the date as a string to the FormData
-      data.append("Dob", formData.Dob);
+      const formEle = document.querySelector(".Form_MainC");
 
-      axios
-        .post(
-          "https://script.google.com/macros/s/AKfycbwoTMSPugGD0L6xjMa8LnDFD_aQyFnxpuHdlAcs94X9K2uqOLn74iUro8HUuvbmr1wd/exec",
-          data
-        )
-        .then((response) => {
-          console.log("Form submitted successfully:", response);
-          setIsSubmitted(true);
-          setFormData({
-            Name: "",
-            FatherName: "",
-            Phone: "",
-            Email: "",
-            Age: "",
-            Gender: "",
-            Dob: null,
-            Address: "",
+      if (formEle) {
+        const data = new FormData(formEle);
+
+        // Manually append the date as a string to the FormData
+        data.append("Dob", formData.Dob);
+
+        axios
+          .post(
+            "https://script.google.com/macros/s/AKfycbwoTMSPugGD0L6xjMa8LnDFD_aQyFnxpuHdlAcs94X9K2uqOLn74iUro8HUuvbmr1wd/exec",
+            data
+          )
+          .then((response) => {
+            console.log("Form submitted successfully:", response);
+            setIsSubmitted(true);
+            setFormData({
+              Name: "",
+              FatherName: "",
+              Phone: "",
+              Email: "",
+              Age: "",
+              Gender: "",
+              Dob: null,
+              Address: "",
+            });
+            formEle.reset();
+            setSlowTransitionOpened(true); // Open success modal after successful submission
+          })
+          .finally(() => {
+            setLoading(false); // Set loading to false after submission completes
+          })
+          .catch((error) => {
+            console.error("Error submitting form:", error);
+            setErrorModalOpened(true); // Open error modal after failed submission
           });
-          formEle.reset();
-          setSlowTransitionOpened(true); // Open success modal after successful submission
-        })
-        .finally(() => {
-          setLoading(false); // Set loading to false after submission completes
-        })
-        .catch((error) => {
-          console.error("Error submitting form:", error);
-          setErrorModalOpened(true); // Open error modal after failed submission
-        });
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setErrorModalOpened(true); // Open error modal after failed submission
+      setLoading(false); // Set loading to false after submission completes
     }
   };
 

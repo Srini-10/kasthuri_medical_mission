@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState, useEffect } from "react";
 import Doctor from "../../assets/Doctor.jpeg";
 import { Button } from "@nextui-org/react";

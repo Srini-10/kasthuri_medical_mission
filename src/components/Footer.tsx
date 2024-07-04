@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import { Button } from "@nextui-org/react";
 import { Link } from "react-router-dom";
@@ -7,7 +8,7 @@ const Footer = () => {
   return (
     <>
       <div className="footer-container bottom-0">
-        <div className="footer-content"> 
+        <div className="footer-content">
           <div className="footer-section">
             <h1 className="footer-title">Kasthuri Medical Mission</h1>
             <p className="footer-description">

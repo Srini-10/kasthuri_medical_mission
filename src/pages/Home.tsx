@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import Main from "../components/Home/Main.tsx";
 import Service from "../components/Home/Service.tsx";

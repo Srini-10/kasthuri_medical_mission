@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import { Link } from "react-router-dom";
 import Doctor from "../../assets/Subramanian.png";
@@ -69,7 +70,10 @@ const FounderDetails = () => {
             {/* <Button className="rounded-md font-medium border-1 border-emerald-400 bg-emerald-400">
               Scroll to Read More!
             </Button> */}
-            <iframe src="https://lottie.host/embed/834baa49-1156-4ce6-a5ed-f1bdb4ce962a/08Oz7byq5J.json"></iframe>
+            <iframe
+              title="arrow"
+              src="https://lottie.host/embed/834baa49-1156-4ce6-a5ed-f1bdb4ce962a/08Oz7byq5J.json"
+            ></iframe>
           </div>
         </div>
       </div>

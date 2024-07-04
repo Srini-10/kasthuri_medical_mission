@@ -1,6 +1,5 @@
-/* eslint-disable jsx-a11y/iframe-has-title */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
-import { Link } from "react-router-dom";
 import "./css/Founder_Details.css";
 import {
   Button,
@@ -120,6 +119,7 @@ const AboutFounder = () => {
               className="ClickHereM cursor-pointer hidden absolute mt-[-92px] ml-[115px] overflow-hidden max-w-[210px] max-h-[180px]"
             >
               <iframe
+                title="click"
                 onClick={onOpen}
                 className="ClickHere_Hand cursor-pointer"
                 src="https://lottie.host/embed/dffdabe2-2da1-4e45-9cb7-8d1ed171c2a9/v7lywKwXyk.json"
@@ -498,6 +498,7 @@ const AboutFounder = () => {
                   className="absolute mt-[-172px] z-50 ml-0 max-w-[100%] max-h-[180px]"
                 >
                   <iframe
+                    title="click"
                     onClick={onOpen}
                     className=" cursor-pointer"
                     src="https://lottie.host/embed/dffdabe2-2da1-4e45-9cb7-8d1ed171c2a9/v7lywKwXyk.json"

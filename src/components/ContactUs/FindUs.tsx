@@ -66,6 +66,7 @@ const FindUs = () => {
         </div>
         <div className="FindUs_Map mt-4">
           <iframe
+            title="map"
             className="rounded-lg"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d577.9134304335166!2d78.17440195484654!3d11.70128787018313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf1007e26ff5b%3A0x8cb781e48048bfce!2sMajor%20Dr.%20P.%20A.%20Subramanian%20residency!5e0!3m2!1sen!2sin!4v1717760477495!5m2!1sen!2sin"
             width="100%"
