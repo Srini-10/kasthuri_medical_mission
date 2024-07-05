@@ -46,103 +46,69 @@ const Course = () => {
 
   const courses = [
     {
+      title: "BGMS",
+      description: "Bachelor of General Medicine and Surgery (BGMS)",
+      details: ["6.5 Years Duration", "7 Semesters", "21 Subjects"],
+      semesters: [
+        // Semester1
+        ["Organic Chemistry", "Bio Chemistry", "Anatomy"],
+        // Semester2
+        ["Physiology", "Pharmacology", "Pharmatherapeutics"],
+        // Semester3
+        ["Pathology", "Bacteriology", "Clinical Hemathology"],
+        // Semester4
+        ["Microbiology", "Dermatology", "Preventive and Social Medicine"],
+        // Semester5
+        ["Emergency Medicine", "Forensic Medicine", "ENT & Ophthalmology"],
+        // Semester6
+        ["Obstetrics and Gynecology", "Pediatrips", "Geriatrics"],
+        // Semester7
+        [
+          "General Medicine",
+          "Case Taking and Treatment of Diseases",
+          "Oral & Practical",
+        ],
+      ],
+    },
+    {
+      title: "DM & S",
+      description: "Diploma of Medicine and Services (DM & S)",
+      details: ["4 Years Duration", "7 Semesters", "21 Subjects"],
+      semesters: [
+        // Semester1
+        ["Organic Chemistry", "Bio Chemistry", "Anatomy"],
+        // Semester2
+        ["Physiology", "Pharmacology", "Pharmatherapeutics"],
+        // Semester3
+        ["Pathology", "Bacteriology", "Clinical Hemathology"],
+        // Semester4
+        ["Microbiology", "Dermatology", "Preventive and Social Medicine"],
+        // Semester5
+        ["Emergency Medicine", "Forensic Medicine", "ENT & Ophthalmology"],
+        // Semester6
+        ["Obstetrics and Gynecology", "Pediatrips", "Geriatrics"],
+        // Semester7
+        [
+          "General Medicine",
+          "Case Taking and Treatment of Diseases",
+          "Oral & Practical",
+        ],
+      ],
+    },
+    {
       title: "BMS & CMP",
       description:
         "Beneficiary of Medicine and Services (BMS) & Characterized Medicine Services (CMP)",
       details: ["2 Years Duration", "4 Semesters", "12 Subjects"],
       semesters: [
         // Semester1
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
+        ["Organic Chemistry", "Bio Chemistry", "Anatomy"],
         // Semester2
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
+        ["Physiology", "Pharmacology", "Pharmatherapeutics"],
         // Semester3
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
+        ["Pathology", "Bacteriology", "Clinical Hemathology"],
         // Semester4
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester5
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester6
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester7
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester8
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester9
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester10
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester11
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester12
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester13
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-      ],
-    },
-    {
-      title: "DM & S",
-      description: "Diploma of Medicine and Services (DM & S)",
-      details: ["4 Years Duration", "8 Semesters", "24 Subjects"],
-      semesters: [
-        // Semester1
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester2
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester3
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester4
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester5
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester6
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester7
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester8
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester9
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester10
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester11
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester12
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester13
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-      ],
-    },
-    {
-      title: "BGMS",
-      description: "Bachelor of General Medicine and Surgery (BGMS)",
-      details: ["6.5 Years Duration", "13 Semesters", "39 Subjects"],
-      semesters: [
-        // Semester1
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester2
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester3
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester4
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester5
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester6
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester7
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester8
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester9
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester10
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester11
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester12
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
-        // Semester13
-        ["Hello World", "Hello World", "Hello World", "Hello World"],
+        ["Microbiology", "Dermatology", "Preventive and Social Medicine"],
       ],
     },
   ];
@@ -193,12 +159,12 @@ const Course = () => {
                         onContextMenu={(e) => e.preventDefault()}
                         draggable="false"
                       />
-                      <p>{detail}</p>
+                      <p className="-mt-1">{detail}</p>
                     </li>
                   ))}
                 </div>
                 <Button
-                  className="Optional_Button bg-transparency hover:bg-emerald-400 text-[16px] font-medium border-2 border-emerald-400 rounded-md mt-4 pt-2 pb-2 pl-5 pr-5"
+                  className="Optional_Button bg-transparency hover:bg-emerald-400 text-[16px] font-medium border-2 border-emerald-400 rounded-md mt-4 py-auto pl-5 pr-5"
                   onClick={() => togglePopup(course)}
                 >
                   Know More
@@ -320,13 +286,25 @@ const Course = () => {
                     </ul>
                     <ul className="ml-6 text-gray-600 mt-2 list-disc">
                       <p className="font-medium text-emerald-400 ml-[-15px] text-[17px]">
-                        1. Medicine and it's allied specialties
+                        2. Surgery and it's allied specialties
                       </p>
-                      <li>Medicine</li>
-                      <li>Pediatrics</li>
-                      <li>Psychiatry</li>
-                      <li>Dermatology and Sexually Transmitted Diseases</li>
-                      <li>Tuberculosis and Respiratory Diseases</li>
+                      <li>Surgery including Pediatric Surgery</li>
+                      <li>Orthopedics </li>
+                      <li>Radio-diagnosis and Radiotherapy</li>
+                    </ul>
+                    <ul className="ml-6 text-gray-600 mt-2 list-disc">
+                      <p className="font-medium text-emerald-400 ml-[-15px] text-[17px]">
+                        3. Orthoinolaryngology
+                      </p>
+                      <p className="font-medium text-emerald-400 ml-[-15px] text-[17px]">
+                        4. Ophthalmology
+                      </p>
+                      <p className="font-medium text-emerald-400 ml-[-15px] text-[17px]">
+                        5. Obstetrics and Gynecology
+                      </p>
+                      <p className="font-medium text-emerald-400 ml-[-15px] text-[17px]">
+                        6. Community Medicine
+                      </p>
                     </ul>
                   </div>
                 </div>
