@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 const app = express();
-const port = process.env.PORT || 4000;
+const port = 4000;
 
 app.use(cors());
 app.use(express.json());
@@ -12,7 +12,6 @@ app.get("/", (req, res) => {
 });
 
 app.post("/send-email", async (req, res) => {
-  console.log("Received form data:", req.body); // Log request body
   const { Name, FatherName, Phone, Email, Age, Gender, Dob, Address } =
     req.body;
 
@@ -59,10 +58,10 @@ app.post("/send-email", async (req, res) => {
   try {
     await transporter.sendMail(userMailOptions);
     await transporter.sendMail(adminMailOptions);
-    res.status(200).send("Emails sent successfully");
+    res.status(200).json({ message: "Emails sent successfully" }); // Return JSON response
   } catch (error) {
     console.error("Error sending email:", error);
-    res.status(500).send("Error sending email");
+    res.status(500).json({ error: "Error sending email" }); // Return JSON error response
   }
 });
 

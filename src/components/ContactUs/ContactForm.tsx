@@ -69,13 +69,12 @@ function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); // Set loading to true while submitting
+    setLoading(true);
 
     try {
       const response = await fetch(
         "https://kasthuri-medical-mission-backend.vercel.app/send-email",
         {
-          // Ensure this matches the server port
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -85,50 +84,42 @@ function ContactForm() {
       );
 
       if (!response.ok) {
-        throw new Error("Network response was not ok");
+        const errorData = await response.json();
+        console.error("Server response:", errorData);
+        throw new Error(errorData.error || "Network response was not ok");
       }
 
-      const formEle = document.querySelector(".Form_MainC");
-
-      if (formEle) {
-        const data = new FormData(formEle);
-
-        // Manually append the date as a string to the FormData
-        data.append("Dob", formData.Dob);
-
-        axios
-          .post(
-            "https://script.google.com/macros/s/AKfycbwoTMSPugGD0L6xjMa8LnDFD_aQyFnxpuHdlAcs94X9K2uqOLn74iUro8HUuvbmr1wd/exec",
-            data
-          )
-          .then((response) => {
-            console.log("Form submitted successfully:", response);
-            setIsSubmitted(true);
-            setFormData({
-              Name: "",
-              FatherName: "",
-              Phone: "",
-              Email: "",
-              Age: "",
-              Gender: "",
-              Dob: null,
-              Address: "",
-            });
-            formEle.reset();
-            setSlowTransitionOpened(true); // Open success modal after successful submission
-          })
-          .finally(() => {
-            setLoading(false); // Set loading to false after submission completes
-          })
-          .catch((error) => {
-            console.error("Error submitting form:", error);
-            setErrorModalOpened(true); // Open error modal after failed submission
+      axios
+        .post(
+          "https://script.google.com/macros/s/AKfycbwoTMSPugGD0L6xjMa8LnDFD_aQyFnxpuHdlAcs94X9K2uqOLn74iUro8HUuvbmr1wd/exec",
+          formData
+        )
+        .then((response) => {
+          console.log("Form submitted successfully:", response);
+          setIsSubmitted(true);
+          setFormData({
+            Name: "",
+            FatherName: "",
+            Phone: "",
+            Email: "",
+            Age: "",
+            Gender: "",
+            Dob: null,
+            Address: "",
           });
-      }
+          setSlowTransitionOpened(true);
+        })
+        .finally(() => {
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.error("Error submitting form:", error);
+          setErrorModalOpened(true);
+        });
     } catch (error) {
       console.error("Error submitting form:", error);
-      setErrorModalOpened(true); // Open error modal after failed submission
-      setLoading(false); // Set loading to false after submission completes
+      setErrorModalOpened(true);
+      setLoading(false);
     }
   };
 

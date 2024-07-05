@@ -84,40 +84,48 @@ function BookForm() {
       );
 
       if (!response.ok) {
-        const errorData = await response.json();
-        console.error("Server response:", errorData);
-        throw new Error("Network response was not ok");
+        const errorText = await response.text();
+        throw new Error(errorText);
       }
 
-      axios
-        .post(
-          "https://script.google.com/macros/s/AKfycbwoTMSPugGD0L6xjMa8LnDFD_aQyFnxpuHdlAcs94X9K2uqOLn74iUro8HUuvbmr1wd/exec",
-          formData
-        )
-        .then((response) => {
-          console.log("Form submitted successfully:", response);
-          setIsSubmitted(true);
-          setFormData({
-            Name: "",
-            FatherName: "",
-            Phone: "",
-            Email: "",
-            Age: "",
-            Gender: "",
-            Dob: null,
-            Address: "",
+      const formEle = document.querySelector(".Form_MainC");
+
+      if (formEle) {
+        const data = new FormData(formEle);
+
+        data.append("Dob", formData.Dob);
+
+        axios
+          .post(
+            "https://script.google.com/macros/s/AKfycbwoTMSPugGD0L6xjMa8LnDFD_aQyFnxpuHdlAcs94X9K2uqOLn74iUro8HUuvbmr1wd/exec",
+            data
+          )
+          .then((response) => {
+            console.log("Form submitted successfully:", response);
+            setIsSubmitted(true);
+            setFormData({
+              Name: "",
+              FatherName: "",
+              Phone: "",
+              Email: "",
+              Age: "",
+              Gender: "",
+              Dob: null,
+              Address: "",
+            });
+            formEle.reset();
+            setSlowTransitionOpened(true);
+          })
+          .finally(() => {
+            setLoading(false);
+          })
+          .catch((error) => {
+            console.error("Error submitting form:", error);
+            setErrorModalOpened(true);
           });
-          setSlowTransitionOpened(true);
-        })
-        .finally(() => {
-          setLoading(false);
-        })
-        .catch((error) => {
-          console.error("Error submitting form:", error);
-          setErrorModalOpened(true);
-        });
+      }
     } catch (error) {
-      console.error("Error submitting form:", error);
+      console.error("Error submitting form:", error.message); // Log error message
       setErrorModalOpened(true);
       setLoading(false);
     }
