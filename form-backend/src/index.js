@@ -7,7 +7,7 @@ const port = 4000; // Ensure this matches your fetch request
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (_req, res) => {
+app.get("/", (req, res) => {
   res.send("Welcome to the Email Server");
 });
 
