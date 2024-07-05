@@ -3,7 +3,6 @@ const cors = require("cors");
 const nodemailer = require("nodemailer");
 const app = express();
 const port = 4000; // Ensure this matches your fetch request
-require('dotenv').config();
 
 app.use(cors());
 app.use(express.json());
@@ -13,10 +12,11 @@ app.get("/", (_req, res) => {
 });
 
 app.post("/send-email", async (req, res) => {
-  const { Name, FatherName, Phone, Email, Age, Gender, Dob, Address } = req.body;
+  const { Name, FatherName, Phone, Email, Age, Gender, Dob, Address } =
+    req.body;
 
   const userMailOptions = {
-    from: process.env.EMAIL_USER,
+    from: "srinisvfb1018@gmail.com",
     to: Email,
     subject: "Your Form Submission",
     text: `Thank you for your submission! Here are the details you provided:
@@ -32,8 +32,8 @@ app.post("/send-email", async (req, res) => {
   };
 
   const adminMailOptions = {
-    from: process.env.EMAIL_USER,
-    to: process.env.ADMIN_EMAIL,
+    from: "srinisvfb1018@gmail.com",
+    to: "srinivasanp1018@gmail.com",
     subject: "New Form Submission",
     text: `A new form has been submitted. Here are the details:
       Name: ${Name}
@@ -50,8 +50,8 @@ app.post("/send-email", async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
+      user: "srinisvfb1018@gmail.com",
+      pass: "beqjilzoiidxamdg",
     },
   });
 
