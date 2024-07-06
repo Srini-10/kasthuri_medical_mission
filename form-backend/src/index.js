@@ -16,7 +16,7 @@ app.post("/send-email", async (req, res) => {
     req.body;
 
   const userMailOptions = {
-    from: "kasthurimedicalmission@gmail.com",
+    from: "srinisvfb1018@gmail.com",
     to: Email,
     subject: "Your Form Submission",
     text: `Thank you for your submission! Here are the details you provided:
@@ -32,8 +32,8 @@ app.post("/send-email", async (req, res) => {
   };
 
   const adminMailOptions = {
-    from: "kasthurimedicalmission@gmail.com",
-    to: "srinisvfb1018@gmail.com",
+    from: "srinisvfb1018@gmail.com",
+    to: "srinivasanp1018@gmail.com",
     subject: "New Form Submission",
     text: `A new form has been submitted. Here are the details:
       Name: ${Name}
@@ -50,18 +50,18 @@ app.post("/send-email", async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "kasthurimedicalmission@gmail.com",
-      pass: "ltoufovpofszagja",
+      user: "srinisvfb1018@gmail.com",
+      pass: "beqjilzoiidxamdg",
     },
   });
 
   try {
     await transporter.sendMail(userMailOptions);
     await transporter.sendMail(adminMailOptions);
-    res.status(200).json({ message: "Emails sent successfully" }); // Return JSON response
+    res.status(200).send("Emails sent successfully");
   } catch (error) {
     console.error("Error sending email:", error);
-    res.status(500).json({ error: "Error sending email" }); // Return JSON error response
+    res.status(500).send("Error sending email");
   }
 });
 

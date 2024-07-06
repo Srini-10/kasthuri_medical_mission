@@ -69,12 +69,13 @@ function BookForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
+    setLoading(true); // Set loading to true while submitting
 
     try {
       const response = await fetch(
         "https://kasthuri-medical-mission-backend.vercel.app/send-email",
         {
+          // Ensure this matches the server port
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -84,15 +85,15 @@ function BookForm() {
       );
 
       if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(errorText);
+        throw new Error("Network response was not ok");
       }
 
-      const formEle = document.querySelector(".Form_MainC");
+      const formEle = document.querySelector(".Form_MainB");
 
       if (formEle) {
         const data = new FormData(formEle);
 
+        // Manually append the date as a string to the FormData
         data.append("Dob", formData.Dob);
 
         axios
@@ -114,20 +115,20 @@ function BookForm() {
               Address: "",
             });
             formEle.reset();
-            setSlowTransitionOpened(true);
+            setSlowTransitionOpened(true); // Open success modal after successful submission
           })
           .finally(() => {
-            setLoading(false);
+            setLoading(false); // Set loading to false after submission completes
           })
           .catch((error) => {
             console.error("Error submitting form:", error);
-            setErrorModalOpened(true);
+            setErrorModalOpened(true); // Open error modal after failed submission
           });
       }
     } catch (error) {
-      console.error("Error submitting form:", error.message); // Log error message
-      setErrorModalOpened(true);
-      setLoading(false);
+      console.error("Error submitting form:", error);
+      setErrorModalOpened(true); // Open error modal after failed submission
+      setLoading(false); // Set loading to false after submission completes
     }
   };
 
