@@ -16,7 +16,7 @@ app.post("/send-email", async (req, res) => {
     req.body;
 
   const userMailOptions = {
-    from: "srinisvfb1018@gmail.com",
+    from: "Kasthurimedicalmission@gmail.com",
     to: Email,
     subject: "Your Form Submission",
     text: `Thank you for your submission! Here are the details you provided:
@@ -32,8 +32,8 @@ app.post("/send-email", async (req, res) => {
   };
 
   const adminMailOptions = {
-    from: "srinisvfb1018@gmail.com",
-    to: "srinivasanp1018@gmail.com",
+    from: "Kasthurimedicalmission@gmail.com",
+    to: "Kasthurimedicalmission@gmail.com",
     subject: "New Form Submission",
     text: `A new form has been submitted. Here are the details:
       Name: ${Name}
@@ -50,8 +50,8 @@ app.post("/send-email", async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "srinisvfb1018@gmail.com",
-      pass: "beqjilzoiidxamdg",
+      user: "Kasthurimedicalmission@gmail.com",
+      pass: "ltoufovpofszagja",
     },
   });
 
