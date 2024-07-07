@@ -15,10 +15,10 @@ function Main() {
     <>
       <div className="Main w-full mt-[60px] overflow-hidden relative">
         <div className="Main_Img overflow-hidden w-[100%] h-[730px]">
-          <LazyLoadImage
+          <img
             src={Doctor}
             alt="Doctor"
-            effect="blur"
+            // effect="blur"
             className="brightness-[70%] mt-[-110px] Bg_Main"
             style={{
               height: "auto",
