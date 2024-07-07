@@ -8,11 +8,11 @@
   .Main_Img {
     overflow: hidden;
     margin-top: 0px;
-    height: 620px;
+    min-height: 740px;
   }
   .Bg_Main {
     min-width: 230%;
-    min-height: 620px;
+    min-height: 740px;
     margin-left: -200px;
   }
 
