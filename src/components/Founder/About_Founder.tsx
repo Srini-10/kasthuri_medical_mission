@@ -206,7 +206,7 @@ const AboutFounder = () => {
                               </p>
                             </div>
                           </div>
-                          <div className="Popup_Container flex gap-4">
+                          <div className="Popup_Container mt-4 flex gap-4">
                             <div className="Img_Model_Container Img_Model_Container2 flex flex-col h-[100%] bg-gray-100 p-3 rounded-xl gap-2">
                               <LazyLoadImage
                                 src={Record4}
